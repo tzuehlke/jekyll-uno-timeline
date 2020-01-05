@@ -1,0 +1,40 @@
+---
+layout: default
+robots: noindex
+---
+
+<!--<div class="main-post-list">-->
+
+  <ul class="timeline">
+    
+    {% for project in site.data.projects %}
+
+      <li class="timeline-inverted">
+        <div class="timeline-image">
+          <img class="img-me" src="{{ project.img | prepend: site.baseurl }}" alt="">
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4><a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">{{ project.name }}</a></h4>
+          </div>
+          <div class="timeline-body">
+            {{ project.desc | markdownify }}
+            <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn" style="margin-top: 10px;">
+              <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers"><i class="fa fa-star"></i><span class="star"> ...</span></a>&emsp;&emsp;
+              <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network"><i class="fa fa-code-fork"></i><span class="fork"> ...</span></a>&emsp;&emsp;
+              <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers"><i class="far fa-eye"></i><span class="watchers">...</span></a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers">
+              <div style="height: 10px;"></div>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+    <!--
+    <li class="timeline-inverted">
+      <div class="timeline-image">
+        <img class="user-image" src="{{site.baseurl}}{{ site.timeline-img }}" alt="">
+      </div>
+    </li> -->
+  </ul>
+
+<!--</div>-->
+
