@@ -1,6 +1,6 @@
 # Site settings
 title: Cara M. Antonaccio
-description: 'Portfolio'
+description: 'Research Portfolio'
 url: 'http://caraantonacc.io'
 baseurl: ''
 profilepic: '/images/cara.jpg'
@@ -14,8 +14,7 @@ author:
   twitter_username: caraantonaccio
 #  facebook_username: joshgerdes
   github_username:  antonaca
-  linkedin_username:  thomas-zühlke-889182165
-  meetup_name: Azure-Meetup-Rostock-MV
+  linkedin_username:  cara-antonaccio-62595554
 
 # Build settings
 destination: _site
