@@ -1,10 +1,11 @@
 # experience section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+
 - name: Coming Soon
   gh_user: antonaca
   repo: DebugContainer
-  img: https://user-images.githubusercontent.com/32843441/62822286-71724400-bb81-11e9-9c0b-59fe58dd39a8.png
+  img: https://yt3.ggpht.com/ytc/AKedOLSQi1UC_kXvg3x032-MyCV1s1WjqxolhEI7bOgiKw=s900-c-k-c0x00ffffff-no-rj
   desc: In progress
   
 - name: Coming Soon
