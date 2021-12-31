@@ -13,9 +13,10 @@
           <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
         </a>
         <hr class="panel-cover__divider">
-        <p class="panel-cover__description">PhD candidate </p>
+        <p class="panel-cover__description">Working at <a href="https://www.arvato-systems.de">Arvato Systems</a> as developer and architect for Azure <i class="fas fa-cloud"></i>.</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary">
-<div class="navigation-wrapper">
+
+        <div class="navigation-wrapper">
 
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
@@ -31,6 +32,17 @@
               </li>
             {% endif %}
 
+            {% if site.author.facebook_username %}
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="http://fb.me/{{ site.author.facebook_username }}" title="{{ site.author.facebook_username }} on Facebook" target="_blank">
+                  <!--<i class="icon icon-social-facebook"></i>-->
+                  <i class="fab fa-facebook fa-lg"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+            {% endif %}
+
             {% if site.author.linkedin_username %}
               <!-- LinkedIn -->
               <li class="navigation__item">
@@ -38,79 +50,42 @@
                   <!--<i class="icon icon-social-linkedin"></i>-->
                   <i class="fab fa-linkedin fa-lg"></i>
                   <span class="label">LinkedIn</span>
-  <div class="panel-main">
-
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
-        <a href="/" title="link to https://www.zuehlke.cloud">
-          <img src="/images/tzuehlke.jpg" class="user-image" alt="Thomas Zühlke Photo">
-          <h1 class="panel-cover__title panel-title">Thomas Zühlke</h1>
-        </a>
-        <hr class="panel-cover__divider">
-        <p class="panel-cover__description">Working at <a href="https://www.arvato-systems.de">Arvato Systems</a> as developer and architect for Azure <i class="fas fa-cloud"></i>.</p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary">
-
-        <div class="navigation-wrapper">
-
-          <nav class="cover-navigation navigation--social">
-            <ul class="navigation">
-
-            
-              <!-- Twitter -->
-              <li class="navigation__item">
-                <a href="http://twitter.com/thomzuehlke" title="@thomzuehlke on Twitter" target="_blank">
-                  <!--<i class="icon icon-social-twitter"></i>-->
-                  <i class="fab fa-twitter fa-lg"></i>
-                  <span class="label">Twitter</span>
                 </a>
               </li>
-            
+            {% endif %}
 
-            
-
-            
-              <!-- LinkedIn -->
-              <li class="navigation__item">
-                <a href="https://www.linkedin.com/in/thomas-zühlke-889182165" title="thomas-zühlke-889182165 on LinkedIn" target="_blank">
-                  <!--<i class="icon icon-social-linkedin"></i>-->
-                  <i class="fab fa-linkedin fa-lg"></i>
-                  <span class="label">LinkedIn</span>
-                </a>
-              </li>
-            
-
-            
+            {% if site.author.github_username %}
               <!-- GitHub -->
               <li class="navigation__item">
-                <a href="https://www.github.com/tzuehlke" title="tzuehlke on GitHub" target="_blank">
+                <a href="https://www.github.com/{{ site.author.github_username }}" title="{{ site.author.github_username }} on GitHub" target="_blank">
                   <!--<i class="icon icon-social-github"></i>-->
                   <i class="fab fa-github fa-lg"></i>
                   <span class="label">GitHub</span>
                 </a>
               </li>
-            
+            {% endif %}
 
-            
+            {% if site.author.meetup_name %}
             <!-- Meetup -->
             <li class="navigation__item">
-              <a href="https://www.meetup.com/Azure-Meetup-Rostock-MV" title="Meetup Azure-Meetup-Rostock-MV" target="_blank">
+              <a href="https://www.meetup.com/{{ site.author.meetup_name }}" title="Meetup {{ site.author.meetup_name }}" target="_blank">
                 <!--<div style="font-size: 1.4rem;"><i class="fab fa-meetup fa-lg"></i></div>-->
                 <i class="fab fa-meetup fa-lg"></i>
                 <span class="label">Meetup</span>
               </a>
             </li>
-            
+            {% endif %}
 
-            
+            {% if site.author.email %}
               <!-- Email -->
               <li class="navigation__item">
-                <a href="mailto:thomas@zuehlke.cloud" title="Email thomas@zuehlke.cloud" target="_blank">
+                <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
                   <!--<i class="icon icon-mail"></i>-->
                   <i class="fas fa-envelope fa-lg"></i>
                   <span class="label">Email</span>
                 </a>
               </li>
-            
+            {% endif %}
 
             </ul>
           </nav>
@@ -118,9 +93,9 @@
           <!--<nav class="cover-navigation cover-navigation--primary">-->
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
-              <li class="navigation__item"><a href="https://blog.zuehlke.cloud" title="link to Blog"><i class="fas fa-link fa-lg"></i>&nbsp;Blog</a></li>
-              <!--<li class="navigation__item"><a href="/#" title="link to Tweets" class="panel-button"><i class="icon icon-social-twitter"></i>&nbsp;Tweets</a></li>-->
-              <li class="navigation__item"><a href="/#projects" title="link to Tweets" class="panel-button projects-button"><i class="fas fa-file-code fa-lg"></i>&nbsp;Projects</a></li>
+              <li class="navigation__item"><a href="https://www.thomas-zuehlke.de" title="link to Blog"><i class="fas fa-link fa-lg"></i>&nbsp;Blog</a></li>
+              <!--<li class="navigation__item"><a href="{{ site.baseurl }}/#" title="link to Tweets" class="panel-button"><i class="icon icon-social-twitter"></i>&nbsp;Tweets</a></li>-->
+              <li class="navigation__item"><a href="{{ site.baseurl }}/#projects" title="link to Tweets" class="panel-button projects-button"><i class="fas fa-file-code fa-lg"></i>&nbsp;Projects</a></li>
             </ul>
           </nav>
 
