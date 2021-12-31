@@ -1,7 +1,7 @@
 # Site settings
-title: Thomas Zühlke
-description: 'Business Card Page'
-url: 'http://thomas.zuehlke.family'
+title: Cara M. Antonaccio
+description: 'Portfolio'
+url: 'http://caraantonacc.io'
 baseurl: ''
 profilepic: '/images/tzuehlke.jpg'
 bkimage: '/images/bk1.jpg'
@@ -9,11 +9,11 @@ google_analytics: UA-XXXXXX-X
 font_awesome: 'XXXXXXXXXX.js'
 
 author:
-  name: 'Thomas Zühlke'
-  email: info@thomas-zuehlke.de
-  twitter_username: thomzuehlke
+  name: 'Cara M. Antonaccio'
+  email: antonaca@bc.edu
+  twitter_username: caraantonaccio
 #  facebook_username: joshgerdes
-  github_username:  tzuehlke
+  github_username:  antonaca
   linkedin_username:  thomas-zühlke-889182165
   meetup_name: Azure-Meetup-Rostock-MV
 
