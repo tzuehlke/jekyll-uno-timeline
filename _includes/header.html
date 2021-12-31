@@ -36,6 +36,7 @@
               <!-- Scholar -->
               <li class="navigation__item">
                 <a href="https://scholar.google.com/{{ site.author.scholar_username }}" title="{{ site.author.scholar_username }} on Google Scholar" target="_blank">
+                            <!--<i class="icon icon-social-scholar"></i>-->
                   <i class="fas fa-user-graduate fa-lg"></i>
                   <span class="label">Scholar</span>
                 </a>
@@ -51,28 +52,6 @@
                   <span class="label">LinkedIn</span>
                 </a>
               </li>
-            {% endif %}
-
-            {% if site.author.github_username %}
-              <!-- GitHub -->
-              <li class="navigation__item">
-                <a href="https://www.github.com/{{ site.author.github_username }}" title="{{ site.author.github_username }} on GitHub" target="_blank">
-                  <!--<i class="icon icon-social-github"></i>-->
-                  <i class="fab fa-github fa-lg"></i>
-                  <span class="label">GitHub</span>
-                </a>
-              </li>
-            {% endif %}
-
-            {% if site.author.meetup_name %}
-            <!-- Meetup -->
-            <li class="navigation__item">
-              <a href="https://www.meetup.com/{{ site.author.meetup_name }}" title="Meetup {{ site.author.meetup_name }}" target="_blank">
-                <!--<div style="font-size: 1.4rem;"><i class="fab fa-meetup fa-lg"></i></div>-->
-                <i class="fab fa-meetup fa-lg"></i>
-                <span class="label">Meetup</span>
-              </a>
-            </li>
             {% endif %}
 
             {% if site.author.email %}
