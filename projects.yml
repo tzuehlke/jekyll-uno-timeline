@@ -1,0 +1,26 @@
+# projects section data
+# If you don't have language feature(language.yml is empty), ignore "i18n" items
+# Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+- name: Debug Container
+  gh_user: tzuehlke
+  repo: DebugContainer
+  img: https://user-images.githubusercontent.com/32843441/62822286-71724400-bb81-11e9-9c0b-59fe58dd39a8.png
+  desc: A fork of the Debug-Container Project from Daniel Meixner. It is based on NodeJS and provides some calls for debugging and for calling other containers. I extended the project with Error-Codes, Sleep-Time, Header-Copy, SSH Server, ...
+
+- name: Jekyll Theme
+  gh_user: tzuehlke
+  repo: jekyll-uno-timeline
+  img: https://raw.githubusercontent.com/tzuehlke/jekyll-uno-timeline/master/screenshot-overview.png
+  desc: This Jekyll Theme. Based on the Uno-Theme with a list of projects as timeline. Like a business card.
+
+- name: Azure Automation Scripts
+  gh_user: tzuehlke
+  repo: scripts
+  img: https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png
+  desc: Some scripts that I used with Azure Automation. For example a VM Start/Stop script or a script for resetting a VPN tunnel.
+
+- name: Face API
+  gh_user: ArvatoSystems
+  repo: FaceApiWPF
+  img: https://raw.githubusercontent.com/ArvatoSystems/FaceApiWPF/master/FaceApiWPFScreenshot.png
+  desc: Using the WebCam and send continuously pictures to the Azure FaceAPI. The analyzed results like age and emotion drawn on the WebCam stream. 
