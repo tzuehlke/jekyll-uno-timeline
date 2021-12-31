@@ -6,21 +6,3 @@
   repo: DebugContainer
   img: https://user-images.githubusercontent.com/32843441/62822286-71724400-bb81-11e9-9c0b-59fe58dd39a8.png
   desc: In progress
-  
-- name: Coming Soon
-  gh_user: antonaca
-  repo: jekyll-uno-timeline
-  img: https://raw.githubusercontent.com/tzuehlke/jekyll-uno-timeline/master/screenshot-overview.png
-  desc: In progress
-
-- name: Coming Soon
-  gh_user: antonaca
-  repo: scripts
-  img: https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png
-  desc: In progress
-
-- name: Coming soon
-  gh_user: antonaca
-  repo: FaceApiWPF
-  img: https://raw.githubusercontent.com/ArvatoSystems/FaceApiWPF/master/FaceApiWPFScreenshot.png
-  desc: In progress
