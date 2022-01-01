@@ -1,6 +1,14 @@
 # projects section data
-# If you don't have language feature(language.yml is empty), ignore "i18n" items
-# Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+- name: Long running Azure Functions on Consumption Plan
+  gh_user: tzuehlke
+  repo: AzureFunction-TimeoutCheck
+  img: https://user-images.githubusercontent.com/32843441/147861707-a0c412ab-93d6-4fd2-86f4-2ef2b2722c47.png
+
+- name: Keycloak Dockerfile with SSH
+  gh_user: tzuehlke
+  repo: keycloakssh
+  img: https://user-images.githubusercontent.com/32843441/147859397-a1dbc63b-c58f-4536-ae8a-d51e17aa08ce.png
+
 - name: Monopoly Money Manager
   gh_user: tzuehlke
   repo: MonopolyMoneyManager
@@ -25,7 +33,8 @@
 - name: Azure Automation Scripts
   gh_user: tzuehlke
   repo: scripts
-  img: https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png
+  #img: https://upload.wikimedia.org/wikipedia/commons/2/2f/PowerShell_5.0_icon.png
+  img: https://docs.microsoft.com/de-de/powershell/media/index/ps_black_128.svg
   desc: Some scripts that I used with Azure Automation. For example a VM Start/Stop script or a script for resetting a VPN tunnel.
 
 - name: Face API
