@@ -3,6 +3,11 @@ layout: null
 sitemap:
   exclude: 'yes'
 ---
+function toggleMobileMenu() {
+  $('.navigation-wrapper').toggleClass('visible');
+  $('.btn-mobile-menu__icon').toggleClass('hidden');
+  $('.btn-mobile-close__icon').toggleClass('hidden');
+}
 
 $(document).ready(function () {
   $('a.panel-button').click(function (e) {
@@ -12,12 +17,11 @@ $(document).ready(function () {
       $('.panel-cover').css('max-width', '100%')
       $('.panel-cover').animate({'width': '100%'}, 400, swing = 'swing', function () {})
       $('.content-wrapper').removeClass('showing')
-      //window.location.href.split('#')[0] // forces reload :(
       history.pushState("", document.title, window.location.pathname + window.location.search);
       //window.location.hash = '' // leaves #
+      e.preventDefault();
       return;
     }
-    window.location.hash = 'projects'
     $('.panel-cover').addClass('panel-cover--collapsed');
     currentWidth = $('.panel-cover').width()
     if (currentWidth < 960) {
@@ -39,12 +43,13 @@ $(document).ready(function () {
   }
 
   $('.btn-mobile-menu').click(function () {
-    $('.navigation-wrapper').toggleClass('visible animated bounceInDown')
-    $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn')
+    if (!$('.navigation-wrapper').hasClass('animated bounceInDown')){
+        $('.navigation-wrapper').addClass('animated bounceInDown');
+    }
+    toggleMobileMenu();
   })
 
   $('.navigation-wrapper .projects-button').click(function () {
-    $('.navigation-wrapper').toggleClass('visible')
-    $('.btn-mobile-menu__icon').toggleClass('icon-list icon-x-circle animated fadeIn')
+    toggleMobileMenu();
   })
 })

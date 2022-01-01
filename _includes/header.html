@@ -1,6 +1,6 @@
 <span class="mobile btn-mobile-menu">
-  <i class="icon icon-list btn-mobile-menu__icon"></i>
-  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+  <i class="fas fa-bars btn-mobile-menu__icon"></i>
+  <i class="far fa-times-circle btn-mobile-close__icon hidden"></i>
 </span>
 
 <header class="panel-cover" style="background-image: url({{ site.baseurl }}{{ site.bkimage }})">
@@ -36,7 +36,8 @@
               <!-- Facebook -->
               <li class="navigation__item">
                 <a href="http://fb.me/{{ site.author.facebook_username }}" title="{{ site.author.facebook_username }} on Facebook" target="_blank">
-                  <i class="icon icon-social-facebook"></i>
+                  <!--<i class="icon icon-social-facebook"></i>-->
+                  <i class="fab fa-facebook fa-lg"></i>
                   <span class="label">Facebook</span>
                 </a>
               </li>
@@ -94,9 +95,8 @@
             <ul class="navigation">
               <li class="navigation__item"><a href="https://www.thomas-zuehlke.de" title="link to Blog"><i class="fas fa-link fa-lg"></i>&nbsp;Blog</a></li>
               <!--<li class="navigation__item"><a href="{{ site.baseurl }}/#" title="link to Tweets" class="panel-button"><i class="icon icon-social-twitter"></i>&nbsp;Tweets</a></li>-->
-              <li class="navigation__item"><a href="javascript:void(0);" title="List of Projects" class="panel-button projects-button"><i class="fas fa-file-code fa-lg"></i>&nbsp;Projects</a></li>
+              <li class="navigation__item"><a href="{{ site.baseurl }}/#projects" title="List of Projects" class="panel-button projects-button"><i class="fas fa-file-code fa-lg"></i>&nbsp;Projects</a></li>
             </ul>
-            <!-- {{ site.baseurl }}/#projects -->
           </nav>
 
         </div>
