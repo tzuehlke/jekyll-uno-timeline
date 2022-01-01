@@ -5,8 +5,8 @@ url: 'http://thomas.zuehlke.family'
 baseurl: ''
 profilepic: '/images/tzuehlke.jpg'
 bkimage: '/images/bk1.jpg'
-google_analytics: UA-633683-3
-font_awesome: '53d7a3a62b.js'
+google_analytics: UA-XXXXXX-X
+font_awesome: 'XXXXXXXXXX.js'
 
 author:
   name: 'Thomas Zühlke'
