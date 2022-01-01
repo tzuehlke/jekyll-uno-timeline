@@ -6,17 +6,19 @@ sitemap:
 
 $(document).ready(function () {
   $('a.panel-button').click(function (e) {
-    //if ($('.panel-cover').hasClass('panel-cover--collapsed')) return
     if ($('.content-wrapper').hasClass('showing')){
       $('.content-wrapper').removeClass('animated slideInRight')
       $('.panel-cover').removeClass('panel-cover--collapsed')
       $('.panel-cover').css('max-width', '100%')
       $('.panel-cover').animate({'width': '100%'}, 400, swing = 'swing', function () {})
       $('.content-wrapper').removeClass('showing')
-      window.location.hash = '';
-      parent.location.hash = ''
+      //window.location.href.split('#')[0] // forces reload :(
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+      //window.location.hash = '' // leaves #
       return;
     }
+    window.location.hash = 'projects'
+    $('.panel-cover').addClass('panel-cover--collapsed');
     currentWidth = $('.panel-cover').width()
     if (currentWidth < 960) {
       $('.panel-cover').addClass('panel-cover--collapsed')
@@ -29,7 +31,7 @@ $(document).ready(function () {
   })
 
   if (window.location.hash && window.location.hash == '#projects') {
-    $('.panel-cover').addClass('panel-cover--collapsed')
+    $('a.panel-button').click();
   }
 
   if (window.location.pathname !== '{{ site.baseurl }}/' && window.location.pathname !== '{{ site.baseurl }}/index.html') {
