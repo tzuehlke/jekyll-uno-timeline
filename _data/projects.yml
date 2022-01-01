@@ -1,6 +1,16 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+- name: Monopoly Money Manager
+  gh_user: tzuehlke
+  repo: MonopolyMoneyManager
+  img: https://user-images.githubusercontent.com/32843441/103153706-bad12c80-4792-11eb-880b-1bf966d6d2a1.png
+
+- name: Azure Gremlin API
+  gh_user: tzuehlke
+  repo: AzGremlinRestApi
+  img: https://user-images.githubusercontent.com/32843441/103159777-d86fb780-47cd-11eb-9952-ea0242e0ab9d.png
+
 - name: Debug Container
   gh_user: tzuehlke
   repo: DebugContainer
