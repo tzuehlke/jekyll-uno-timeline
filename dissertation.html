@@ -5,269 +5,264 @@
     <li>
       <h1><b>Understanding complex dynamics of armed conflict and attacks against humanitarian aid: A machine learning approach</b></h1>
     </li>
-    <li></li>
     <li>
+      <h3><b>0. Abstract</b></h3>
+      <ul>
+        <li>Three dissertation studies propose to examine the spatiotemporal dynamics and predictors of lethal and non-lethal attacks against humanitarian assistance. Using data from the Aid Worker Security Database (Humanitarian Outcomes, 2022) and the Armed Conflict Database version 20.1 (UCDP/PRIO, 2021) the dissertation aims to understand how, if at all, prediction models may be useful to understand risk, develop strategies to prevent such incidents, and reduce their impact on affected communities.</li>
+      </ul>
+    </li>
+    <li>
+      <h3><b>1. Introduction</b></h3>
       <ul>
         <li>
-          <h3><b>0. Abstract</b></h3>
+          <h4>1.1 Aerial bombardment of MSF hospital in Kunduz</h4>
           <ul>
-            <li>Three dissertation studies propose to examine the spatiotemporal dynamics and predictors of lethal and non-lethal attacks against humanitarian assistance. Using data from the Aid Worker Security Database (Humanitarian Outcomes, 2022) and the Armed Conflict Database version 20.1 (UCDP/PRIO, 2021) the dissertation aims to understand how, if at all, prediction models may be useful to understand risk, develop strategies to prevent such incidents, and reduce their impact on affected communities.</li>
+            <li>In December 2015, the United States Air Force conducted five aerial bombing runs on a hospital in Kunduz, Afghanistan. The bombardment destroyed the hospital&apos;s emergency ward and killed dozens of people, including fourteen Médecins Sans Frontières (MSF) staff members, 24 patients, and four caregivers; many more were also wounded (Benton &amp; Atshan, 2016). The attack on MSF in Kunduz is but one of many examples of persistent, pervasive, and devastating attacks against humanitarian assistance. Since 1997, more than 2,186 people have been killed, 2,308 wounded, and 1,665 kidnapped in attacks on humanitarian operations (Humanitarian Outcomes, 2021). More attacks were reported in 2020 than any year on record -- resulting in 103 people killed, 130 wounded, and 62 kidnappings. In almost all conflict settings around the world, violent attacks against humanitarian assistance and denials of access to civilians in need pose massive threats to health and human development.</li>
           </ul>
         </li>
         <li>
-          <h3><b>1. Introduction</b></h3>
+          <h4>1.2 Intentionality and impact</h4>
           <ul>
-            <li>
-              <h4>1.1 Aerial bombardment of MSF hospital in Kunduz</h4>
-              <ul>
-                <li>In December 2015, the United States Air Force conducted five aerial bombing runs on a hospital in Kunduz, Afghanistan. The bombardment destroyed the hospital&apos;s emergency ward and killed dozens of people, including fourteen Médecins Sans Frontières (MSF) staff members, 24 patients, and four caregivers; many more were also wounded (Benton &amp; Atshan, 2016). The attack on MSF in Kunduz is but one of many examples of persistent, pervasive, and devastating attacks against humanitarian assistance. Since 1997, more than 2,186 people have been killed, 2,308 wounded, and 1,665 kidnapped in attacks on humanitarian operations (Humanitarian Outcomes, 2021). More attacks were reported in 2020 than any year on record -- resulting in 103 people killed, 130 wounded, and 62 kidnappings. In almost all conflict settings around the world, violent attacks against humanitarian assistance and denials of access to civilians in need pose massive threats to health and human development.</li>
-              </ul>
-            </li>
-            <li>
-              <h4>1.2 Intentionality and impact</h4>
-              <ul>
-                <li>In some conflict settings, armed forces and groups specifically target humanitarian personnel and infrastructure to achieve tactical and strategic objectives, in defiance of international laws and humanitarian protections (Humanitarian Outcomes, 2021). Although most state parties to conflict recognize the protected status of civilians and humanitarian actors as a defining principle of International Humanitarian Law, the extent to which acknowledgment of these principles translates into respect for protected populations varies widely. Notwithstanding intentionality, however, the impact of attacks on humanitarian assistance extends far beyond acute destruction and casualties.</li>
-                <li>In affected communities, access to critical health and social protection services is often disrupted or discontinued in the wake of an attack. As a result of the loss of humanitarian personnel and destruction of critical health and social infrastructure, higher mortality and morbidity increase due to preventable illnesses like malnutrition, malaria, and diarrheal disease (ref). In the long-term, impacts of humanitarian attacks in affected communities often compound, such that incidents foment distrust in humanitarian assistance. Distrust in the wake of an attack increases the threat of subsequent incidents, in the short-term; and threatens the integrity of health and social protection systems long after the emergency period has ended (ref).</li>
-              </ul>
-            </li>
+            <li>In some conflict settings, armed forces and groups specifically target humanitarian personnel and infrastructure to achieve tactical and strategic objectives, in defiance of international laws and humanitarian protections (Humanitarian Outcomes, 2021). Although most state parties to conflict recognize the protected status of civilians and humanitarian actors as a defining principle of International Humanitarian Law, the extent to which acknowledgment of these principles translates into respect for protected populations varies widely. Notwithstanding intentionality, however, the impact of attacks on humanitarian assistance extends far beyond acute destruction and casualties.</li>
+            <li>In affected communities, access to critical health and social protection services is often disrupted or discontinued in the wake of an attack. As a result of the loss of humanitarian personnel and destruction of critical health and social infrastructure, higher mortality and morbidity increase due to preventable illnesses like malnutrition, malaria, and diarrheal disease (ref). In the long-term, impacts of humanitarian attacks in affected communities often compound, such that incidents foment distrust in humanitarian assistance. Distrust in the wake of an attack increases the threat of subsequent incidents, in the short-term; and threatens the integrity of health and social protection systems long after the emergency period has ended (ref).</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3><b>2. Significance and aims</b></h3>
+      <ul>
+        <li>A better understanding of attacks against humanitarian entities can inform prevention, bear witness to the cost, and contribute to accountability for violators of International Humanitarian Law (IHL) and Human Rights. Despite abundant evidence from across contexts demonstrating the impact of humanitarian attacks, more research is needed to examine the role, nature, and motivations of armed forces and groups working in proximity to aid organizations, dynamics of conflict and how, if at all, these characteristics shape humanitarian outcomes. Likewise, more evidence is needed to understand how specific conflict dynamics and operational contexts drive attacks. Three dissertation studies will use publicly available data from the Aid Worker Security Database (Humanitarian Outcomes, 2021) and the Armed Conflict Database version 20.1 (UCDP/PRIO, 2021) to examine how conflict and contextual dynamics shape the risk attacks against humanitarian assistance, globally, and explore the temporal and spatial variation of attacks from 1997 to 2021.</li>
+      </ul>
+    </li>
+    <li>
+      <h3><b>3. Conceptual issues and terminology</b></h3>
+      <ul>
+        <li>
+          <h4>3.1 The importance of conceptual clarity</h4>
+          <ul>
+            <li>Many terms that are used in the literature to conceptualize attacks against humanitarian health are similar but distinct. Important concepts like “attack” and “humanitarian” are defined and operationalized inconsistently in the literature, which affects the clarity, interpretation, and comparability of findings across studies. Pursuant to clarity and consistency, and comparability of the concepts in the proposal with the broader literature on attacks against humanitarian systems, this section will review key conceptual issues and terminology related to humanitarian assistance, attacks, and armed conflict.</li>
           </ul>
         </li>
         <li>
-          <h3><b>2. Significance and aims</b></h3>
+          <h4>3.2 The Humanitarian Space</h4>
           <ul>
-            <li>A better understanding of attacks against humanitarian entities can inform prevention, bear witness to the cost, and contribute to accountability for violators of International Humanitarian Law (IHL) and Human Rights. Despite abundant evidence from across contexts demonstrating the impact of humanitarian attacks, more research is needed to examine the role, nature, and motivations of armed forces and groups working in proximity to aid organizations, dynamics of conflict and how, if at all, these characteristics shape humanitarian outcomes. Likewise, more evidence is needed to understand how specific conflict dynamics and operational contexts drive attacks. Three dissertation studies will use publicly available data from the Aid Worker Security Database (Humanitarian Outcomes, 2021) and the Armed Conflict Database version 20.1 (UCDP/PRIO, 2021) to examine how conflict and contextual dynamics shape the risk attacks against humanitarian assistance, globally, and explore the temporal and spatial variation of attacks from 1997 to 2021.</li>
+            <li>The <b>humanitarian space</b> comprises the people (i.e., personnel, aid recipients, and patients) and things (i.e., facilities, transport and equipment) that are involved in humanitarian assistance. Outcomes of attacks affecting people include: killing, wounding, kidnapping, harassing, threatening, robbing, and intimidating personnel, patients, or those trying to access humanitarian assistance. Examples of attacks against things include bombing, shelling, looting, forced entry, shooting into, encircling or other forceful interference with facilities, equipment, and transports involved in humanitarian operations (including assaults on, theft of, and interference with ambulances and other medical vehicles). In addition to these examples, the International Committee of the Red Cross and Red Crescent Societies (ICRC) also considers an additional form of attack in the misuse of facilities and improper use of the Red Cross and Red Crescent emblems, and the misuse of signs intended to designate protected humanitarian entities (Terry, 2013).</li>
           </ul>
         </li>
         <li>
-          <h3><b>3. Conceptual issues and terminology</b></h3>
+          <h4>3.3 Defining an &quot;attack&quot;</h4>
           <ul>
-            <li>
-              <h4>3.1 The importance of conceptual clarity</h4>
-              <ul>
-                <li>Many terms that are used in the literature to conceptualize attacks against humanitarian health are similar but distinct. Important concepts like “attack” and “humanitarian” are defined and operationalized inconsistently in the literature, which affects the clarity, interpretation, and comparability of findings across studies. Pursuant to clarity and consistency, and comparability of the concepts in the proposal with the broader literature on attacks against humanitarian systems, this section will review key conceptual issues and terminology related to humanitarian assistance, attacks, and armed conflict.</li>
-              </ul>
-            </li>
-            <li>
-              <h4>3.2 The Humanitarian Space</h4>
-              <ul>
-                <li>The <b>humanitarian space</b> comprises the people (i.e., personnel, aid recipients, and patients) and things (i.e., facilities, transport and equipment) that are involved in humanitarian assistance. Outcomes of attacks affecting people include: killing, wounding, kidnapping, harassing, threatening, robbing, and intimidating personnel, patients, or those trying to access humanitarian assistance. Examples of attacks against things include bombing, shelling, looting, forced entry, shooting into, encircling or other forceful interference with facilities, equipment, and transports involved in humanitarian operations (including assaults on, theft of, and interference with ambulances and other medical vehicles). In addition to these examples, the International Committee of the Red Cross and Red Crescent Societies (ICRC) also considers an additional form of attack in the misuse of facilities and improper use of the Red Cross and Red Crescent emblems, and the misuse of signs intended to designate protected humanitarian entities (Terry, 2013).</li>
-              </ul>
-            </li>
-            <li>
-              <h4>3.3 Defining an &quot;attack&quot;</h4>
-              <ul>
-                <li><i>Attack or incident?</i>  Legal protections for humanitarian assistance were first enshrined in the <b>Geneva Conventions</b> (1864 and 1949). Although the Geneva Conventions condemn attacks and explicitly describe the parties to be protected, they do not explicitly define what constitutes an attack (e.g., Article 18 of the Fourth Geneva Convention). Moreover, the terms &quot;attack&quot; and &quot;violence&quot;, are often used interchangeably in the literature and by researchers, advocates, legal analysts, and policymakers. Some argue that the word &quot;attack&quot; is more powerful, as it evokes the legal protections of the Geneva Conventions. Interestingly, the WHO and SHCC actually avoid using the word “attack”, suggesting a more appropriate term is “incident”. The latter, they argue, includes interferences like administrative access barriers, denials, protests, or demonstrations that impede healthcare provision and recognizes, at least tacitly, that indiscriminate violence and crossfire are often the source of the threat. These gray areas are not semantically insignificant. For example, much of the literature relies on describing humanitarian attacks as &quot;violence&quot;, which can limit the scope of inquiry to physical assault and neglects threats, interferences, and non-physical incidents. 
-                  <p>				  <i>Criteria for documenting violent and non-violent events.</i>  Humanitarian attacks include both violent and non-violent incidents. Examples of violent attacks include bombing, robbery, hijacking, shooting/gunfire, violent searching of facilities, fire and arson, abduction of health workers, assault, torture, execution, violent demonstrations, and sexual violence. Non-violent attacks include forced closure of facilities, military use and takeover, cyberattacks, denial or delay of access, forcing staff to act against their ethical code, administrative harassment, obstruction, psychological violence or threat of violence. While there is generally agreement about what is and is not an attack, the literature has not reached a consensus about precisely who and what is measured in attacks. Two sets of criteria are used in the literature.
-                    <br />
+            <li><i>Attack or incident?</i>  Legal protections for humanitarian assistance were first enshrined in the <b>Geneva Conventions</b> (1864 and 1949). Although the Geneva Conventions condemn attacks and explicitly describe the parties to be protected, they do not explicitly define what constitutes an attack (e.g., Article 18 of the Fourth Geneva Convention). Moreover, the terms &quot;attack&quot; and &quot;violence&quot;, are often used interchangeably in the literature and by researchers, advocates, legal analysts, and policymakers. Some argue that the word &quot;attack&quot; is more powerful, as it evokes the legal protections of the Geneva Conventions. Interestingly, the WHO and SHCC actually avoid using the word “attack”, suggesting a more appropriate term is “incident”. The latter, they argue, includes interferences like administrative access barriers, denials, protests, or demonstrations that impede healthcare provision and recognizes, at least tacitly, that indiscriminate violence and crossfire are often the source of the threat. These gray areas are not semantically insignificant. For example, much of the literature relies on describing humanitarian attacks as &quot;violence&quot;, which can limit the scope of inquiry to physical assault and neglects threats, interferences, and non-physical incidents. 
+              <p>			  <i>Criteria for documenting violent and non-violent events.</i>  Humanitarian attacks include both violent and non-violent incidents. Examples of violent attacks include bombing, robbery, hijacking, shooting/gunfire, violent searching of facilities, fire and arson, abduction of health workers, assault, torture, execution, violent demonstrations, and sexual violence. Non-violent attacks include forced closure of facilities, military use and takeover, cyberattacks, denial or delay of access, forcing staff to act against their ethical code, administrative harassment, obstruction, psychological violence or threat of violence. While there is generally agreement about what is and is not an attack, the literature has not reached a consensus about precisely who and what is measured in attacks. Two sets of criteria are used in the literature.
+                <br />
 </p>
 
-                  <ul>
-                    <li>The first set of criteria for documenting attacks refers only to deliberate and unintentional attacks against clearly-identifiable humanitarian operations. By limiting the scope of inquiry to identifiable entities, this approach offers greater confidence that the perpetrator was cognizant of the humanitarian status of the target. The Safeguarding Healthcare in Conflict Coalition (SHCC), for example, uses a discrete monitoring system that only reports direct attacks against the health care sector. This approach fails to capture many attacks (e.g., psychological violence; blockages; harassment, intimidation, and threats of violence; one-sided violence; attacks on other sectors which affect health). Restrictive inclusion criteria are also limited in conflict settings like Syria, where attacks are ubiquitous despite the fact that ambulances are camouflaged, health workers maintain a low profile, and facilities are built underground to discourage deliberate targeting.</li>
-                    <li>The second approach captures all attacks that impact civilians, without regard for intentionality or humanitarian identifiability. Inclusion criteria that cast a broader net to document attacks not only prioritizes impact, but also open the door to inquiry into the complex dynamics of each attack. A recent report by the WHO, for example, defines an attack as any act of verbal or physical obstruction or threat of violence that interferes with the availability, access, or delivery of humanitarian assistance during an emergency (WHO, 2018). The WHO definition of an attack casts a wide definition of &quot;humanitarian&quot; to include incidents based on the broader impact of the attack. This definition does not distinguish between an attack against the humanitarian system that is perpetrated against the health sector and an attack perpetrated against another humanitarian sector that affects health. Ultimately, the WHO definition offers a “health in all policy” criteria for documenting attacks, in that it captures attacks on roads, markets, education, and related non-medical arms of the humanitarian system.</li>
-                  </ul>
-                </li>
+              <ul>
+                <li>The first set of criteria for documenting attacks refers only to deliberate and unintentional attacks against clearly-identifiable humanitarian operations. By limiting the scope of inquiry to identifiable entities, this approach offers greater confidence that the perpetrator was cognizant of the humanitarian status of the target. The Safeguarding Healthcare in Conflict Coalition (SHCC), for example, uses a discrete monitoring system that only reports direct attacks against the health care sector. This approach fails to capture many attacks (e.g., psychological violence; blockages; harassment, intimidation, and threats of violence; one-sided violence; attacks on other sectors which affect health). Restrictive inclusion criteria are also limited in conflict settings like Syria, where attacks are ubiquitous despite the fact that ambulances are camouflaged, health workers maintain a low profile, and facilities are built underground to discourage deliberate targeting.</li>
+                <li>The second approach captures all attacks that impact civilians, without regard for intentionality or humanitarian identifiability. Inclusion criteria that cast a broader net to document attacks not only prioritizes impact, but also open the door to inquiry into the complex dynamics of each attack. A recent report by the WHO, for example, defines an attack as any act of verbal or physical obstruction or threat of violence that interferes with the availability, access, or delivery of humanitarian assistance during an emergency (WHO, 2018). The WHO definition of an attack casts a wide definition of &quot;humanitarian&quot; to include incidents based on the broader impact of the attack. This definition does not distinguish between an attack against the humanitarian system that is perpetrated against the health sector and an attack perpetrated against another humanitarian sector that affects health. Ultimately, the WHO definition offers a “health in all policy” criteria for documenting attacks, in that it captures attacks on roads, markets, education, and related non-medical arms of the humanitarian system.</li>
               </ul>
             </li>
           </ul>
         </li>
+      </ul>
+    </li>
+    <li>
+      <h3><b>4. Literature review</b></h3>
+      <ul>
         <li>
-          <h3><b>4. Literature review</b></h3>
+          <h4>4.1 Epistemic streams</h4>
           <ul>
-            <li>
-              <h4>4.1 Epistemic streams</h4>
-              <ul>
-                <li>Two broad epistemic streams dominate in the literature on humanitarian attacks. The first stream is primarily concerned with documenting violence against humanitarian assistance. On one side, policymakers and legal analysts argue that the underlying intent of an attack is difficult to ascertain and not critically relevant. Instead, they argue that the more pressing issue is whether attacks are precipitated by failure to comply with rules and protections safeguarding humanitarian assistance (Mahieu et al., 2020). In particular, criminal law offers a useful analogy in the common practice to infer intent from consequence (e.g., although stabbing may not be intended to kill, if the victim dies, a murder charge – which requires intent – can be brought). Even when there is no clear evidence of intent to harm, attacks against humanitarian operations subvert key obligations of parties to armed conflict to distinguish between military and civilian objects, engage in proportional attacks, and take precautions to protect civilians. In comparison, the second epistemic stream is more speculative, with scholars proposing possible explanations or &quot;causes&quot; of humanitarian attacks, often without corresponding empirical evidence. They argue, in contrast to policy, with stronger evidence of the conditions that lead to attacks on humanitarian assistance, which may be instrumental for preventing attacks, in the first place. Both streams have made important contributions to building the evidence base related to attacks on humanitarian assistance, through documenting and examining the impacts of such incidents.</li>
-              </ul>
-            </li>
-            <li>
-              <h4>4.2 Major themes &amp; findings</h4>
-              <ul>
-                <li><b>Interdisciplinary evidence.</b> A growing base of literature describes attacks against humanitarian operations and their impact, including attacks on individuals (e.g., doctors, nurses, administrators, security guards, ambulance drivers, and translators), obstructions (e.g., stropping ambulances at checkpoints), discrimination and coercion (e.g., pressure to treat one patient over another), and attacks on and misappropriation of health facilities and property (e.g., vandalism, theft, and ambulance theft by armed actors). In Syria, for example, qualitative surveys documenting the experiences of healthcare workers found that armed conflict has resulted in disruptions in their work, training and resources; barriers and hazards to providing services; mental health risks and security threats (Abdelrahman &amp; Haar, 2021). Human rights investigations in Guatemala, El Salvador, and others represent some of the earliest instances of literature documenting humanitarian attacks. Multiple research studies have explored the local impact of attacks against humanitarians, frequently using data from qualitative interview techniques and population-level health indicators.</li>
-                <li><b>A persistent, ubiquitous threat.</b> Existing evidence underscores how attacks against protected humanitarian entities are not an isolated problem - incidents are documented in nearly all global conflict settings. South Sudan, for example, has proven to be a profoundly complex and insecure humanitarian operational environment throughout the post-independence era. Nickerson (2015) describes one attack on a hospital in 2014: “armed fighters entered the Malakal Teaching Hospital run by Medecins Sans Frontieres, robbed patients and their families of cash and mobile phones, and shot those who had nothing to give – killing 14 patients who were lying in their hospital beds.” In Iraq, qualitative interviews with health care providers during the Islamic State (IS) occupation of Mosul from 2014 to 2017 found that they had been subjected to “terrifying working environments, the strict separation between the sexes, restricted movement, and continuous monitoring by the Al-Hesba morality police” (Michlig et al., 2019).</li>
-                <li><b>A growing threat?</b> The direct and indirect impacts of humanitarian attacks are profound and well-described in the literature. Much of the published literature suggests that the risks humanitarian operations face are growing, highlighting that attacks against NGOs have increased exponentially over the last two decades in some settings. Some scholars argue, perhaps inferring from local findings, that global conflict &quot;has become more brutal&quot; and that humanitarian attacks are a unique feature of &quot;new wars&quot;; but there is little evidence to substantiate this claim. Other sources point to the increase in the reported number of health workers being killed and facilities being destroyed during conflict. Claims that humanitarian insecurity is a new and growing threat require more rigorous examination, as the targeting of protected humanitarian entities in armed conflict has been documented across history and contexts. For example, in contrast to claim humanitarian operational risks are growing, a more likely the explanation for the observed increase in casualties may be that improvements in data collection and the development of systematic reporting tools have strengthened the data on the scope and scale of such attacks (cite). Ultimately, while the evidence is clear that humanitarian attacks are pervasive and show no signs of relenting, much remains to be learned about the factors driving these events.</li>
-              </ul>
-            </li>
+            <li>Two broad epistemic streams dominate in the literature on humanitarian attacks. The first stream is primarily concerned with documenting violence against humanitarian assistance. On one side, policymakers and legal analysts argue that the underlying intent of an attack is difficult to ascertain and not critically relevant. Instead, they argue that the more pressing issue is whether attacks are precipitated by failure to comply with rules and protections safeguarding humanitarian assistance (Mahieu et al., 2020). In particular, criminal law offers a useful analogy in the common practice to infer intent from consequence (e.g., although stabbing may not be intended to kill, if the victim dies, a murder charge – which requires intent – can be brought). Even when there is no clear evidence of intent to harm, attacks against humanitarian operations subvert key obligations of parties to armed conflict to distinguish between military and civilian objects, engage in proportional attacks, and take precautions to protect civilians. In comparison, the second epistemic stream is more speculative, with scholars proposing possible explanations or &quot;causes&quot; of humanitarian attacks, often without corresponding empirical evidence. They argue, in contrast to policy, with stronger evidence of the conditions that lead to attacks on humanitarian assistance, which may be instrumental for preventing attacks, in the first place. Both streams have made important contributions to building the evidence base related to attacks on humanitarian assistance, through documenting and examining the impacts of such incidents.</li>
           </ul>
         </li>
         <li>
-          <h3><b>5. Research gaps and opportunities</b></h3>
+          <h4>4.2 Major themes &amp; findings</h4>
           <ul>
-            <li>Although a growing body of literature documents humanitarian attacks and describes their impact, important research gaps remain in several areas. In this section, I will summarize the major evidence, empirical, methodological, knowledge, and practical-knowledge gaps that remain in the research on humanitarian attacks, operational risks, and violence prevention.</li>
-            <li>
-              <h4>5.1 Evidence</h4>
-              <ul>
-                <li>Evidence gaps occur when research findings allow for conclusions to be made, but are contradictory when examined from other perspectives (Jacobs, 2011; Müller-Bloch &amp; Kranz, 2014; Miles, 2017). The geographic focus of research needs to be expanded and more in-depth investigation and discussion of recurrent and small-scale attacks is needed. Empirical gaps refer to research findings or propositions that require evaluation or empirical verification (Jacobs, 2011; Müller-Bloch and Kranz, 2014; Miles, 2017). In the research on humanitarian attack risk many claim that the global rate of attacks against humanitarian actors is increasing; however, a closer examination of the spatio-temporal dynamics of incidents is needed to understand how, if at all, attacks have changed over time.</li>
-              </ul>
-            </li>
-            <li>
-              <h4>5.2 Population</h4>
-              <ul>
-                <li>Although humanitarian attacks are a global issue, certain populations and humanitarian identities have received inadequate representation in the literature (Jacobs, 2011; Müller-Bloch &amp; Kranz, 2014; Miles, 2017). Gender, for example is a key population gap in the research on humanitarian attacks, both in terms of attack risks and the larger implications that incidents may have. More research is also needed to understand the unique experiences and perspectives of international, national, and local humanitarian workers, in addition to their relationship with each other and the community. Similarly, the overlapping and intersecting identities of the people affected by attacks, as well as the specific vulnerabilities they create remain poorly understood (e.g., how attacks affect a local health worker working in their national health system compared to a local health worker working for an international NGO).</li>
-              </ul>
-            </li>
-            <li>
-              <h4>5.3 Knowledge &amp; practical knowledge</h4>
-              <ul>
-                <li>Knowledge gaps arise from a lack of information, meaning the desired research findings do not exist (Jacobs, 2011; Müller-Bloch &amp; Kranz, 2014; Miles, 2017). Haar et al. (2021) highlight a persistent knowledge gap arising from a lack of research on perpetrators and intentionality. The authors call for future research to examine the context and conflict-related dynamics of attacks. In the area of translational science, greater knowledge of why certain attacks and outcomes occur in specific situations remains an elusive question. Information about the dynamics of perpetration, in particular, can inform prevention and interventions to change perpetrators’ behavior.</li>
-              </ul>
-            </li>
-            <li>
-              <h4>5.4 Methodological</h4>
-              <ul>
-                <li>Finally, methodological gaps refer to research topics that require different and/or more rigorous methods to generate new insights or avoid distorted findings (Jacobs, 2011; Müller-Bloch &amp; Kranz, 2014; Miles, 2017). With respect to opportunities to strengthen the methods used to understand attacks, research and reporting has largely relied on qualitative interviewing and descriptive statistics to address research problems, and to our knowledge, only one study to date has used predictive modeling techniques to understand how conflict-related and operational dynamics contribute to the occurrence of humanitarian attacks (Hoelscher et al., 2017). As a result, the evidence on the complex dynamics driving humanitarian attacks, globally and in local clusters of attacks, remains quite limited.</li>
-              </ul>
-            </li>
+            <li><b>Interdisciplinary evidence.</b> A growing base of literature describes attacks against humanitarian operations and their impact, including attacks on individuals (e.g., doctors, nurses, administrators, security guards, ambulance drivers, and translators), obstructions (e.g., stropping ambulances at checkpoints), discrimination and coercion (e.g., pressure to treat one patient over another), and attacks on and misappropriation of health facilities and property (e.g., vandalism, theft, and ambulance theft by armed actors). In Syria, for example, qualitative surveys documenting the experiences of healthcare workers found that armed conflict has resulted in disruptions in their work, training and resources; barriers and hazards to providing services; mental health risks and security threats (Abdelrahman &amp; Haar, 2021). Human rights investigations in Guatemala, El Salvador, and others represent some of the earliest instances of literature documenting humanitarian attacks. Multiple research studies have explored the local impact of attacks against humanitarians, frequently using data from qualitative interview techniques and population-level health indicators.</li>
+            <li><b>A persistent, ubiquitous threat.</b> Existing evidence underscores how attacks against protected humanitarian entities are not an isolated problem - incidents are documented in nearly all global conflict settings. South Sudan, for example, has proven to be a profoundly complex and insecure humanitarian operational environment throughout the post-independence era. Nickerson (2015) describes one attack on a hospital in 2014: “armed fighters entered the Malakal Teaching Hospital run by Medecins Sans Frontieres, robbed patients and their families of cash and mobile phones, and shot those who had nothing to give – killing 14 patients who were lying in their hospital beds.” In Iraq, qualitative interviews with health care providers during the Islamic State (IS) occupation of Mosul from 2014 to 2017 found that they had been subjected to “terrifying working environments, the strict separation between the sexes, restricted movement, and continuous monitoring by the Al-Hesba morality police” (Michlig et al., 2019).</li>
+            <li><b>A growing threat?</b> The direct and indirect impacts of humanitarian attacks are profound and well-described in the literature. Much of the published literature suggests that the risks humanitarian operations face are growing, highlighting that attacks against NGOs have increased exponentially over the last two decades in some settings. Some scholars argue, perhaps inferring from local findings, that global conflict &quot;has become more brutal&quot; and that humanitarian attacks are a unique feature of &quot;new wars&quot;; but there is little evidence to substantiate this claim. Other sources point to the increase in the reported number of health workers being killed and facilities being destroyed during conflict. Claims that humanitarian insecurity is a new and growing threat require more rigorous examination, as the targeting of protected humanitarian entities in armed conflict has been documented across history and contexts. For example, in contrast to claim humanitarian operational risks are growing, a more likely the explanation for the observed increase in casualties may be that improvements in data collection and the development of systematic reporting tools have strengthened the data on the scope and scale of such attacks (cite). Ultimately, while the evidence is clear that humanitarian attacks are pervasive and show no signs of relenting, much remains to be learned about the factors driving these events.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3><b>5. Research gaps and opportunities</b></h3>
+      <ul>
+        <li>Although a growing body of literature documents humanitarian attacks and describes their impact, important research gaps remain in several areas. In this section, I will summarize the major evidence, empirical, methodological, knowledge, and practical-knowledge gaps that remain in the research on humanitarian attacks, operational risks, and violence prevention.</li>
+        <li>
+          <h4>5.1 Evidence</h4>
+          <ul>
+            <li>Evidence gaps occur when research findings allow for conclusions to be made, but are contradictory when examined from other perspectives (Jacobs, 2011; Müller-Bloch &amp; Kranz, 2014; Miles, 2017). The geographic focus of research needs to be expanded and more in-depth investigation and discussion of recurrent and small-scale attacks is needed. Empirical gaps refer to research findings or propositions that require evaluation or empirical verification (Jacobs, 2011; Müller-Bloch and Kranz, 2014; Miles, 2017). In the research on humanitarian attack risk many claim that the global rate of attacks against humanitarian actors is increasing; however, a closer examination of the spatio-temporal dynamics of incidents is needed to understand how, if at all, attacks have changed over time.</li>
           </ul>
         </li>
         <li>
-          <h3><b>6. Methodology</b></h3>
+          <h4>5.2 Population</h4>
           <ul>
-            <li>
-              <h4>6.0 Predictive modeling approaches</h4>
-              <ul>
-                <li>I will use predictive modeling techniques to understand the conflict-related and contextual dynamics that shape humanitarian attack outcomes. I will use parametric linear regression models to nonparametric model ensembles produced using random forest algorithms, and assess the accuracy of each approach in predicting humanitarian attack outcomes.
-                  <p>				  What is event prediction? In predictive modeling, an event refers to an incident that occurs at a specific location and time, within semantic contexts, that has an important impact either on society or the environment. Examples of events include earthquakes, civil unrest, system failures, pandemics, crimes, and terrorist attacks. The interdisciplinary nature of many prediction problems means that the majority of existing event prediction methods emerged through independent streams, via the demands of specific use cases. Strong, accurate prediction models afford the ability to anticipate events like attacks against humanitarians before they occur, facilitating primary prevention of the potential negative health and societal impacts.
-                    <br />
-				  Brief history of predictive modeling. Before the 21st century, accurate predictions of event outcomes were prohibitively difficult to attain, due to computational limitations; however, the field of predictive analysis has grown rapidly thanks to technological advances in high-performance computers and new artificial intelligence (AI) techniques. In addition, considerable progress has been made to address key analytical challenges of event prediction -- including heterogeneous multi-faceted outputs, complex (e.g., spatial, temporal, and semantic) dependencies, and streaming data feeds. In summary, the &quot;big data&quot; era offers researchers a wide range predictive modeling techniques and evaluation procedures that are both computationally feasible and easily translatable across disciplines. Contemporary applications of event prediction techniques are found in the literature on health and medicine, media, business, infrastructure and engineering systems, cyber-security, disaster planning, and counterterrorism. Proposed activities and tasks to complete the three studies follow the Cross-Industry Standard Practices for Data Mining (CRISP-DM; Table 1). Tasks up to and including data preparation will be conducted simultaneously for the three studies.
-                    <br />
+            <li>Although humanitarian attacks are a global issue, certain populations and humanitarian identities have received inadequate representation in the literature (Jacobs, 2011; Müller-Bloch &amp; Kranz, 2014; Miles, 2017). Gender, for example is a key population gap in the research on humanitarian attacks, both in terms of attack risks and the larger implications that incidents may have. More research is also needed to understand the unique experiences and perspectives of international, national, and local humanitarian workers, in addition to their relationship with each other and the community. Similarly, the overlapping and intersecting identities of the people affected by attacks, as well as the specific vulnerabilities they create remain poorly understood (e.g., how attacks affect a local health worker working in their national health system compared to a local health worker working for an international NGO).</li>
+          </ul>
+        </li>
+        <li>
+          <h4>5.3 Knowledge &amp; practical knowledge</h4>
+          <ul>
+            <li>Knowledge gaps arise from a lack of information, meaning the desired research findings do not exist (Jacobs, 2011; Müller-Bloch &amp; Kranz, 2014; Miles, 2017). Haar et al. (2021) highlight a persistent knowledge gap arising from a lack of research on perpetrators and intentionality. The authors call for future research to examine the context and conflict-related dynamics of attacks. In the area of translational science, greater knowledge of why certain attacks and outcomes occur in specific situations remains an elusive question. Information about the dynamics of perpetration, in particular, can inform prevention and interventions to change perpetrators’ behavior.</li>
+          </ul>
+        </li>
+        <li>
+          <h4>5.4 Methodological</h4>
+          <ul>
+            <li>Finally, methodological gaps refer to research topics that require different and/or more rigorous methods to generate new insights or avoid distorted findings (Jacobs, 2011; Müller-Bloch &amp; Kranz, 2014; Miles, 2017). With respect to opportunities to strengthen the methods used to understand attacks, research and reporting has largely relied on qualitative interviewing and descriptive statistics to address research problems, and to our knowledge, only one study to date has used predictive modeling techniques to understand how conflict-related and operational dynamics contribute to the occurrence of humanitarian attacks (Hoelscher et al., 2017). As a result, the evidence on the complex dynamics driving humanitarian attacks, globally and in local clusters of attacks, remains quite limited.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3><b>6. Methodology</b></h3>
+      <ul>
+        <li>
+          <h4>6.0 Predictive modeling approaches</h4>
+          <ul>
+            <li>I will use predictive modeling techniques to understand the conflict-related and contextual dynamics that shape humanitarian attack outcomes. I will use parametric linear regression models to nonparametric model ensembles produced using random forest algorithms, and assess the accuracy of each approach in predicting humanitarian attack outcomes.
+              <p>			  What is event prediction? In predictive modeling, an event refers to an incident that occurs at a specific location and time, within semantic contexts, that has an important impact either on society or the environment. Examples of events include earthquakes, civil unrest, system failures, pandemics, crimes, and terrorist attacks. The interdisciplinary nature of many prediction problems means that the majority of existing event prediction methods emerged through independent streams, via the demands of specific use cases. Strong, accurate prediction models afford the ability to anticipate events like attacks against humanitarians before they occur, facilitating primary prevention of the potential negative health and societal impacts.
+                <br />
+			  Brief history of predictive modeling. Before the 21st century, accurate predictions of event outcomes were prohibitively difficult to attain, due to computational limitations; however, the field of predictive analysis has grown rapidly thanks to technological advances in high-performance computers and new artificial intelligence (AI) techniques. In addition, considerable progress has been made to address key analytical challenges of event prediction -- including heterogeneous multi-faceted outputs, complex (e.g., spatial, temporal, and semantic) dependencies, and streaming data feeds. In summary, the &quot;big data&quot; era offers researchers a wide range predictive modeling techniques and evaluation procedures that are both computationally feasible and easily translatable across disciplines. Contemporary applications of event prediction techniques are found in the literature on health and medicine, media, business, infrastructure and engineering systems, cyber-security, disaster planning, and counterterrorism. Proposed activities and tasks to complete the three studies follow the Cross-Industry Standard Practices for Data Mining (CRISP-DM; Table 1). Tasks up to and including data preparation will be conducted simultaneously for the three studies.
+                <br />
 </p>
 
+              <ul>
+                <li>Table 1. CRISP-DM process, phases, and task with corresponding dissertation activities
                   <ul>
-                    <li>Table 1. CRISP-DM process, phases, and task with corresponding dissertation activities
+                    <li><img src="../assets/image_1646151908512_0.png" title="image.png" /></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>6.1 Understanding global dynamics of armed conflict and humanitarian attacks</h4>
+          <ul>
+            <li>6.1.0 Aid Worker Security Database (Humanitarian Outcomes, 2022)
+              <ul>
+                <li>The Aid Worker Security Database (AWSD) is a publicly-available, living dataset that was created in 2005 and made available online in 2010 with funding support from the US, Canadian, and Irish governments. The AWSD reports data on lethal and non-lethal attacks against a wide range of humanitarian actors operating across global settings -- including NGOs, the International Movement of the Red Cross/Red Crescent (ICRC), UN agencies belonging to the Inter-Agency Standing Committee on Humanitarian Affairs (FAO, OCHA, UNDP, UNFPA, UNHCR, UNICEF, UN-Habitat, WFP and WHO) as well as IOM, UNRWA, UNMAS and when applicable, the World Bank and locally contracted staff (e.g., drivers, security guards, and others). Information about attacks is sourced, coded, and manually entered by human operators who review the incidents to ensure that they meet the criteria for inclusion. Attacks in the database date to 1997, with more complete information available from 2000-onwards. Historical events are continually updated as new information becomes available. When a coder cannot determine whether the incident meets the parameters, the incident is referred to two other members of the database team for review and assessment. Incidents and specific pieces of information are periodically reviewed for consistency. Incidents affecting contracted workers and vendors of the humanitarian organizations are included if they occur in the course of their work supporting the humanitarian mission. The AWSD does not include violence perpetrated against UN peacekeepers, human rights workers, election monitors, or purely political, religious, or advocacy organizations.</li>
+              </ul>
+            </li>
+            <li>6.1.1 Predicting humanitarian attack outcomes
+              <ul>
+                <li>The first study will examine how conflict-related and humanitarian operational conditions influence lethal and non-lethal attack outcomes, globally. I will use <b>random forest</b> algorithms to estimate a binary tree structure of risk factors that contribute to attacks against humanitarian entities, globally. Theoretical predictors (described in detail in the following sections) include three levels of variables which represent spatiotemporal dynamics at the country-level, conflict-level, and event-level.</li>
+                <li>Random forest is an ensemble learning approach that uses three algorithms to strategically generate a multitude of (presumably over-fitted) trees by randomly sampling (bagging) and by random choice of splitting variables (Figure 1). The base model that I will compare the random forest to is a <b>zero-inflated negative binomial regression</b>. Zero-inflated negative binomial distribution suits aid worker attack data, where counts of events are over-dispersed based on what the Poisson distribution would assume (i.e., the large number of zeros for the outcome variables).
+                  <ul>
+                    <li><img src="../assets/image_1644600027556_0.png" title="image.png" /></li>
+                    <li>Figure 1. Recursive binary partition of a two-dimensional subspace</li>
+                  </ul>
+                </li>
+                <li>I will build predictions in classification and regression using modes and averages, respectively. I will use Stata 16SE&apos;s &quot;crtrees&quot;, a wrapper for the R functions &quot;tree()&quot; and &quot;randomForest()&quot; that implements both CART and the Random Forest in classification and regression problems. I will build regression trees with a constant in each terminal node using a test sample with 50 percent of the original sample size and the 0 SE rule to estimate the honest tree. The option &quot;rforests&quot; will grow the tree, perform bagging, and produce a classification tree with optimal pruning, boosting, and random forests (Figure 2).
+                  <ul>
+                    <li><img src="../assets/image_1644183609913_0.png" title="image.png" />
                       <ul>
-                        <li><img src="../assets/image_1646151908512_0.png" title="image.png" /></li>
+                        <li>Figure 2. Framework of random forest algorithms</li>
                       </ul>
                     </li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li>
-              <h4>6.1 Understanding global dynamics of armed conflict and humanitarian attacks</h4>
+            <li>6.1.2 Theoretical risk factors
               <ul>
-                <li>6.1.0 Aid Worker Security Database (Humanitarian Outcomes, 2022)
+                <li><b>Conflict dynamics.</b> Humanitarian organizations operate in a variety of conflict and post-conflict settings, making travel and operational security for assistance workers more difficult. Conflict dynamics may likewise influence when, where, and how humanitarian entities are attacked. Variables related to the type, scale, and parties involved in armed conflict will be examined as potential predictors of attacks against humanitarian operations.
                   <ul>
-                    <li>The Aid Worker Security Database (AWSD) is a publicly-available, living dataset that was created in 2005 and made available online in 2010 with funding support from the US, Canadian, and Irish governments. The AWSD reports data on lethal and non-lethal attacks against a wide range of humanitarian actors operating across global settings -- including NGOs, the International Movement of the Red Cross/Red Crescent (ICRC), UN agencies belonging to the Inter-Agency Standing Committee on Humanitarian Affairs (FAO, OCHA, UNDP, UNFPA, UNHCR, UNICEF, UN-Habitat, WFP and WHO) as well as IOM, UNRWA, UNMAS and when applicable, the World Bank and locally contracted staff (e.g., drivers, security guards, and others). Information about attacks is sourced, coded, and manually entered by human operators who review the incidents to ensure that they meet the criteria for inclusion. Attacks in the database date to 1997, with more complete information available from 2000-onwards. Historical events are continually updated as new information becomes available. When a coder cannot determine whether the incident meets the parameters, the incident is referred to two other members of the database team for review and assessment. Incidents and specific pieces of information are periodically reviewed for consistency. Incidents affecting contracted workers and vendors of the humanitarian organizations are included if they occur in the course of their work supporting the humanitarian mission. The AWSD does not include violence perpetrated against UN peacekeepers, human rights workers, election monitors, or purely political, religious, or advocacy organizations.</li>
-                  </ul>
-                </li>
-                <li>6.1.1 Predicting humanitarian attack outcomes
-                  <ul>
-                    <li>The first study will examine how conflict-related and humanitarian operational conditions influence lethal and non-lethal attack outcomes, globally. I will use <b>random forest</b> algorithms to estimate a binary tree structure of risk factors that contribute to attacks against humanitarian entities, globally. Theoretical predictors (described in detail in the following sections) include three levels of variables which represent spatiotemporal dynamics at the country-level, conflict-level, and event-level.</li>
-                    <li>Random forest is an ensemble learning approach that uses three algorithms to strategically generate a multitude of (presumably over-fitted) trees by randomly sampling (bagging) and by random choice of splitting variables (Figure 1). The base model that I will compare the random forest to is a <b>zero-inflated negative binomial regression</b>. Zero-inflated negative binomial distribution suits aid worker attack data, where counts of events are over-dispersed based on what the Poisson distribution would assume (i.e., the large number of zeros for the outcome variables).
-                      <ul>
-                        <li><img src="../assets/image_1644600027556_0.png" title="image.png" /></li>
-                        <li>Figure 1. Recursive binary partition of a two-dimensional subspace</li>
-                      </ul>
-                    </li>
-                    <li>I will build predictions in classification and regression using modes and averages, respectively. I will use Stata 16SE&apos;s &quot;crtrees&quot;, a wrapper for the R functions &quot;tree()&quot; and &quot;randomForest()&quot; that implements both CART and the Random Forest in classification and regression problems. I will build regression trees with a constant in each terminal node using a test sample with 50 percent of the original sample size and the 0 SE rule to estimate the honest tree. The option &quot;rforests&quot; will grow the tree, perform bagging, and produce a classification tree with optimal pruning, boosting, and random forests (Figure 2).
-                      <ul>
-                        <li><img src="../assets/image_1644183609913_0.png" title="image.png" />
-                          <ul>
-                            <li>Figure 2. Framework of random forest algorithms</li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>6.1.2 Theoretical risk factors
-                  <ul>
-                    <li><b>Conflict dynamics.</b> Humanitarian organizations operate in a variety of conflict and post-conflict settings, making travel and operational security for assistance workers more difficult. Conflict dynamics may likewise influence when, where, and how humanitarian entities are attacked. Variables related to the type, scale, and parties involved in armed conflict will be examined as potential predictors of attacks against humanitarian operations.
-                      <ul>
-                        <li>                          <mark><i>Presence and scale of armed conflict.</i>                          </mark>
+                    <li>                      <mark><i>Presence and scale of armed conflict.</i>                      </mark>
  (Continuous) I will use the count of battle-related deaths in a given country-year to examine how, if at all, the presence and scale of armed conflict predicts outcomes of humanitarian attacks.</li>
-                        <li>                          <mark><i>Type of armed conflict.</i>                          </mark>
+                    <li>                      <mark><i>Type of armed conflict.</i>                      </mark>
  (Categorical) The type of dispute may influence the behavior of armed groups toward humanitarian operations. The strategic use of violence may also have an impact on how aid workers are targeted. In settings where insurgents are seeking secession, parties to conflict may be more suspicious of humanitarians, which could serve to increase the risk of an attack. With these dynamics in mind, I will evaluate the widely-held notion that humanitarian is related to armed conflict, and if so, to what extent.</li>
-                        <li>                          <mark><i>Perpetrator characteristics.</i>                          </mark>
+                    <li>                      <mark><i>Perpetrator characteristics.</i>                      </mark>
  (Categorical) The type (e.g., structure, organization, and leadership) of armed forces and groups can incentivize attacks on humanitarian operations in different ways, either through tacit acceptance or formal orders from leaders. Group variations in adherence to International Humanitarian Law may also have an impact on the severity of attacks on humanitarians. To understand how humanitarian attack outcomes vary based on the actors involved, perpetrator type and name will be included as potential risk factors where available.
-                          <p>						  
-                            <mark><i>One-sided conflict.</i>                            </mark>
+                      <p>					  
+                        <mark><i>One-sided conflict.</i>                        </mark>
  (Continuous) Existing evidence suggests that violence against civilians and aid workers happens together. In general, when civilians make up a large percentage conflict-related casualties, armed forces and groups may also be more likely to attack humanitarian operations. In addition to intentional targeting, humanitarian entities are also subjected to collateral damage while working to alleviate humanitarian needs. As a result, the risk of attacks against humanitarian operations is thought to be higher in settings where conflict parties target non-combatants and civilians.
-                            <br />
+                        <br />
 </p>
-                        </li>
-                      </ul>
                     </li>
-                    <li><b>Operational and contextual factors.</b> In addition to conflict-related dynamics, another set of explanations considers humanitarian operation, itself, and the context of an attack. For example, humanitarian ties (both perceived and real) to military and development entities are thought to place operations at an increased risk of attacks.
-                      <ul>
-                        <li>                          <mark><i>Who was affected, where, while doing what?</i>                          </mark>
+                  </ul>
+                </li>
+                <li><b>Operational and contextual factors.</b> In addition to conflict-related dynamics, another set of explanations considers humanitarian operation, itself, and the context of an attack. For example, humanitarian ties (both perceived and real) to military and development entities are thought to place operations at an increased risk of attacks.
+                  <ul>
+                    <li>                      <mark><i>Who was affected, where, while doing what?</i>                      </mark>
  (Continuous,  categorical) In some operational contexts, armed forces and groups oppose to the political, development, and humanitarian agendas of aid organizations. The risk of attacks is thought to be higher in settings where humanitarian aid operates alongside military forces, either because the lines between military and humanitarian actors are blurred or because humanitarian workers are perceived as biased for or against a particular conflict party. To understand how attacks vary based on context, I will examine the organizational affiliation, gender, and nationality of those affected, what they were doing, and where they were when the incident happened.</li>
-                        <li>                          <mark><i>Peacekeeping operations.</i>                          </mark>
+                    <li>                      <mark><i>Peacekeeping operations.</i>                      </mark>
  (Binary, continuous) Coordination between humanitarian operations and UN peacekeeping operations (PKOs) is also thought to affect humanitarian attack risk. While UNPKOs are thought to create space for secure humanitarian operations in post-conflict areas, it may be that because of their international and/or &apos;Western&apos; associations, humanitarian workers are subjected to more violence. Given the lack of clarity on the potential protective effects of peacekeeping operations, I will examine how, if at all, presence, size, and mandate of UNPKOs predict attack outcomes.</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>6.1.3 Model evaluation</li>
-              </ul>
-            </li>
-            <li>
-              <h4>6.2 Historical and emerging hotspots of humanitarian attacks</h4>
-              <ul>
-                <li>6.2.0 Exploratory analysis of spatial data
-                  <ul>
-                    <li>In the second study, I will explore the spatiotemporal dynamics of attacks against humanitarian assistance using geostatistical modeling techniques. <b>Hotspot analysis</b> is an exploratory spatial analysis and mapping technique which explores the clustering of spatial phenomena, which are depicted as points in a map and refer to locations of events or objects. Hotspot analysis is used to examine the degree of point-event interaction to determine spatial patterns and also asses the density of points in a specified location (Baddeley, 2010). Early uses of hotspot analysis emerged from research on point distributions, or the arrangements of data points in a space (Chakravorty, 1995). Thanks to advancements in geographic information systems (GIS)-based software and technologies, hotspot analysis is becoming more widely used in public health, epidemiological research, and other disciplines (i.e., much of the literature on hotspot analysis comes from literature on crime mapping).</li>
-                  </ul>
-                </li>
-                <li>6.2.1 Principles of geostatistical analysis
-                  <ul>
-                    <li><i>Tobler&apos;s principle.</i> In geostatistics, <b>spatial autocorrelation</b> refers to the degree that things or events in a geographic unit are similar to things or events in neighboring geographic units (goodchild1987spatial). Positive spatial autocorrelation supports <b>Tobler&apos;s principle</b>, which contends that everything in a geographic space is related, but closer spaces between objects and/or events represent closer relationships. <b>Moran&apos;s I Index</b> is a common measure of global spatial autocorrelation that is used to empirically assess Tobler&apos;s principle. A positive Moran&apos;s I value suggests positive spatial autocorrelation, meaning that a group of neighboring events has similar values. Negative values suggest a negative spatial relationship, meaning that groups of values differ from neighbors. Positive or negative non-significant values suggest a lack of spatial association, indicating that data are randomly distributed across geographical units.</li>
-                  </ul>
-                </li>
-                <li>6.2.2 Identifying spatiotemporal clusters
-                  <ul>
-                    <li><i>Emerging hotspot analysis.</i> I will use <b>emerging hotspot analysis</b> to examine how attacks against humanitarian assistance vary across time and space. Historical and emerging hotspots of attacks offer a useful dual heuristic: on one hand, they identify risk profiles, and on the other, they invite further interrogation of key variables that shape humanitarian outcomes over time and space. I will conduct geostatistical analyses in Geopandas associated data visualization libraries in Python, I will examine the distribution of attacks, broadly, and the global autocorrelation of events affecting humanitarian operations from 1997 to 2021.</li>
-                    <li><i>Getis and Ord Gi * Test.</i> Although Moran&apos;s I Index offers evidence of the global association of the events in the analysis, it is limited in its interpretability because it does not indicate <i>where</i> the clusters are located. Thus, in addition to the Moran&apos;s I measure, I will also use the <b>Getis and Ord Gi (Gi* ) test</b> to examine the dynamics of attacks in geographical units within the context of their neighbors. The Getis-Ord Index offers stronger evidence of the boundaries of spatial clusters based on concentrations of Gi* values in a particular area. In interpreting Gi* , geographical units with high values are relevant, but not necessarily a statistically significant hotspot -- to be statistically significant, a hotspot needs to have a high Gi* value and also be surrounded by other units of high value.</li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li>
-              <h4>6.3 Understanding historical and emerging hotspots of humanitarian attacks</h4>
+            <li>6.1.3 Model evaluation</li>
+          </ul>
+        </li>
+        <li>
+          <h4>6.2 Historical and emerging hotspots of humanitarian attacks</h4>
+          <ul>
+            <li>6.2.0 Exploratory analysis of spatial data
               <ul>
-                <li>6.3.1 Using local indicators to explain global autocorrelation
-                  <ul>
-                    <li><i>Spatiotemporal random forests.</i> In the third dissertation study, I will use random forests to understand attack outcomes within the context of historical and emerging hotspots. Local indicators are theoretically important for understanding why <b>global autocorrelation</b> (clustering of events) is or is not observed. First, I will use random forest algorithms to investigate how conflict-related, operational and contextual dynamics predict outcomes within the observed spatiotemporal clusters. Second, I will illustrate how, if at all, the dynamics within historical and emerging hotspots differ from aggregate global trends in terms of the key risk factors that predict attacks against humanitarian operations.</li>
-                    <li>More on method, tests, validation</li>
-                  </ul>
-                </li>
+                <li>In the second study, I will explore the spatiotemporal dynamics of attacks against humanitarian assistance using geostatistical modeling techniques. <b>Hotspot analysis</b> is an exploratory spatial analysis and mapping technique which explores the clustering of spatial phenomena, which are depicted as points in a map and refer to locations of events or objects. Hotspot analysis is used to examine the degree of point-event interaction to determine spatial patterns and also asses the density of points in a specified location (Baddeley, 2010). Early uses of hotspot analysis emerged from research on point distributions, or the arrangements of data points in a space (Chakravorty, 1995). Thanks to advancements in geographic information systems (GIS)-based software and technologies, hotspot analysis is becoming more widely used in public health, epidemiological research, and other disciplines (i.e., much of the literature on hotspot analysis comes from literature on crime mapping).</li>
+              </ul>
+            </li>
+            <li>6.2.1 Principles of geostatistical analysis
+              <ul>
+                <li><i>Tobler&apos;s principle.</i> In geostatistics, <b>spatial autocorrelation</b> refers to the degree that things or events in a geographic unit are similar to things or events in neighboring geographic units (goodchild1987spatial). Positive spatial autocorrelation supports <b>Tobler&apos;s principle</b>, which contends that everything in a geographic space is related, but closer spaces between objects and/or events represent closer relationships. <b>Moran&apos;s I Index</b> is a common measure of global spatial autocorrelation that is used to empirically assess Tobler&apos;s principle. A positive Moran&apos;s I value suggests positive spatial autocorrelation, meaning that a group of neighboring events has similar values. Negative values suggest a negative spatial relationship, meaning that groups of values differ from neighbors. Positive or negative non-significant values suggest a lack of spatial association, indicating that data are randomly distributed across geographical units.</li>
+              </ul>
+            </li>
+            <li>6.2.2 Identifying spatiotemporal clusters
+              <ul>
+                <li><i>Emerging hotspot analysis.</i> I will use <b>emerging hotspot analysis</b> to examine how attacks against humanitarian assistance vary across time and space. Historical and emerging hotspots of attacks offer a useful dual heuristic: on one hand, they identify risk profiles, and on the other, they invite further interrogation of key variables that shape humanitarian outcomes over time and space. I will conduct geostatistical analyses in Geopandas associated data visualization libraries in Python, I will examine the distribution of attacks, broadly, and the global autocorrelation of events affecting humanitarian operations from 1997 to 2021.</li>
+                <li><i>Getis and Ord Gi * Test.</i> Although Moran&apos;s I Index offers evidence of the global association of the events in the analysis, it is limited in its interpretability because it does not indicate <i>where</i> the clusters are located. Thus, in addition to the Moran&apos;s I measure, I will also use the <b>Getis and Ord Gi (Gi* ) test</b> to examine the dynamics of attacks in geographical units within the context of their neighbors. The Getis-Ord Index offers stronger evidence of the boundaries of spatial clusters based on concentrations of Gi* values in a particular area. In interpreting Gi* , geographical units with high values are relevant, but not necessarily a statistically significant hotspot -- to be statistically significant, a hotspot needs to have a high Gi* value and also be surrounded by other units of high value.</li>
               </ul>
             </li>
           </ul>
         </li>
         <li>
-          <h3><b>7. Preliminary findings</b></h3>
+          <h4>6.3 Understanding historical and emerging hotspots of humanitarian attacks</h4>
           <ul>
-            <li>
-              <h4>7.1 Distribution of attacks (1997-2020)</h4>
+            <li>6.3.1 Using local indicators to explain global autocorrelation
               <ul>
-                <li><img src="../assets/image_1644178577610_0.png" title="image.png" /></li>
+                <li><i>Spatiotemporal random forests.</i> In the third dissertation study, I will use random forests to understand attack outcomes within the context of historical and emerging hotspots. Local indicators are theoretically important for understanding why <b>global autocorrelation</b> (clustering of events) is or is not observed. First, I will use random forest algorithms to investigate how conflict-related, operational and contextual dynamics predict outcomes within the observed spatiotemporal clusters. Second, I will illustrate how, if at all, the dynamics within historical and emerging hotspots differ from aggregate global trends in terms of the key risk factors that predict attacks against humanitarian operations.</li>
+                <li>More on method, tests, validation</li>
               </ul>
             </li>
           </ul>
         </li>
+      </ul>
+    </li>
+    <li>
+      <h3><b>7. Preliminary findings</b></h3>
+      <ul>
         <li>
-          <h3><b>8. Feasibility and proposed timeline</b></h3>
+          <h4>7.1 Distribution of attacks (1997-2020)</h4>
           <ul>
-            <li>
-              <h4>8.1 Limitations of the proposed dissertation studies</h4>
-              <ul>
-                <li>Despite the strengths of the proposed studies, limitations exist with respect to the data and methods for the three analyses. With respect to data limitations, it is possible that the risk of aid attacks is greater in settings with a larger humanitarian presence; however, since there is no census of humanitarian workers, no reliable “denominator” (total population count) is available to inform estimation of the risk of humanitarian attacks as a function of the total population of aid workers. Similarly, the data that do exist on humanitarian attacks are limited and do not represent the total population of attacks, due to underreporting of incidents and incomplete information about perpetrators and context, especially during early years of reporting. These data also are limited to violent incidents, as non-violent attacks are not monitored in data collection mechanisms.</li>
-                <li>A proposed timeline follows. Pursuant to a defense at the end of June 2022, I will present the proposal to the Boston College School of Social Work on or before 1st April 2022. Since I will use publicly-available datasets, I will not incur any costs or time burden in data collection. I will conduct all statistical analyses in Python with support, as needed, from consultants in the Boston College Office of Research Services. Random forest algorithms are computationally demanding, so extra time has been factored in to account for any difficulties that might arise during modeling.</li>
-                <li>I will submit complete drafts of the three papers to the committee and chair on or before 15th March 2022, and will continue to revise as I wait to receive feedback and suggested revisions. I will submit revisions to the dissertation chair in mid-March. On or before 1st May 2022, I will send complete drafts of the three dissertation papers to the committee for final revisions and feedback. I will spend April preparing the defense presentation and completing revisions as I receive committee feedback. On or around 15th June 2022, I will defend the dissertation. I will complete any final revisions in the following days and submit the signed and approved dissertation on or before 1 August 2022.</li>
-              </ul>
-            </li>
+            <li><img src="../assets/image_1644178577610_0.png" title="image.png" /></li>
           </ul>
         </li>
+      </ul>
+    </li>
+    <li>
+      <h3><b>8. Feasibility and proposed timeline</b></h3>
+      <ul>
         <li>
-          <h3><b>9. References</b></h3>
+          <h4>8.1 Limitations of the proposed dissertation studies</h4>
           <ul>
-            <li>
-              <h3>9.* References</h3>
-              <ul>
-                <li></li>
-              </ul>
-            </li>
+            <li>Despite the strengths of the proposed studies, limitations exist with respect to the data and methods for the three analyses. With respect to data limitations, it is possible that the risk of aid attacks is greater in settings with a larger humanitarian presence; however, since there is no census of humanitarian workers, no reliable “denominator” (total population count) is available to inform estimation of the risk of humanitarian attacks as a function of the total population of aid workers. Similarly, the data that do exist on humanitarian attacks are limited and do not represent the total population of attacks, due to underreporting of incidents and incomplete information about perpetrators and context, especially during early years of reporting. These data also are limited to violent incidents, as non-violent attacks are not monitored in data collection mechanisms.</li>
+            <li>A proposed timeline follows. Pursuant to a defense at the end of June 2022, I will present the proposal to the Boston College School of Social Work on or before 1st April 2022. Since I will use publicly-available datasets, I will not incur any costs or time burden in data collection. I will conduct all statistical analyses in Python with support, as needed, from consultants in the Boston College Office of Research Services. Random forest algorithms are computationally demanding, so extra time has been factored in to account for any difficulties that might arise during modeling.</li>
+            <li>I will submit complete drafts of the three papers to the committee and chair on or before 15th March 2022, and will continue to revise as I wait to receive feedback and suggested revisions. I will submit revisions to the dissertation chair in mid-March. On or before 1st May 2022, I will send complete drafts of the three dissertation papers to the committee for final revisions and feedback. I will spend April preparing the defense presentation and completing revisions as I receive committee feedback. On or around 15th June 2022, I will defend the dissertation. I will complete any final revisions in the following days and submit the signed and approved dissertation on or before 1 August 2022.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3><b>9. References</b></h3>
+      <ul>
+        <li>
+          <h3>9.* References</h3>
+          <ul>
+            <li></li>
           </ul>
         </li>
       </ul>
