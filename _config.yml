@@ -1,6 +1,6 @@
 # Site settings
-title: Thomas Zühlke
-description: 'Business Card Page'
+title: nuj Blog
+description: 'tech and diary'
 url: 'https://juniroc.github.io/blog/'
 baseurl: ''
 profilepic: '/images/tzuehlke.jpg'
@@ -9,9 +9,8 @@ google_analytics: UA-XXXXXX-X
 font_awesome: 'XXXXXXXXXX.js'
 
 author:
-  name: 'Thomas Zühlke'
-  email: info@thomas-zuehlke.de
-  twitter_username: thomzuehlke
+  name: 'Minjun Lee'
+  email: lmj35021@gmail.com
 #  facebook_username: joshgerdes
   github_username:  tzuehlke
   linkedin_username:  thomas-zühlke-889182165
