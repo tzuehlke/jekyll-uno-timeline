@@ -1,7 +1,7 @@
 # Site settings
 title: nuj Blog
 description: 'tech and diary'
-url: 'https://juniroc.github.io/blog/'
+url: 'https://juniroc.github.io/'
 baseurl: ''
 profilepic: '/images/tzuehlke.jpg'
 bkimage: '/images/bk1.jpg'
