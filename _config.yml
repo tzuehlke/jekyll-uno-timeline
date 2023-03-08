@@ -1,7 +1,7 @@
 # Site settings
 title: Thomas Zühlke
 description: 'Business Card Page'
-url: 'http://thomas.zuehlke.family'
+url: 'https://www.zuehlke.cloud'
 baseurl: ''
 profilepic: '/images/tzuehlke.jpg'
 bkimage: '/images/bk1.jpg'
@@ -10,7 +10,8 @@ font_awesome: 'XXXXXXXXXX.js'
 
 author:
   name: 'Thomas Zühlke'
-  email: info@thomas-zuehlke.de
+  email: thomas@zuehlke.cloud
+  mastodon: tzuehlke@mstdn.social
   twitter_username: thomzuehlke
 #  facebook_username: joshgerdes
   github_username:  tzuehlke
