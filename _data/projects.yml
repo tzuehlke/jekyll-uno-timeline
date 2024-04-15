@@ -2,7 +2,7 @@
 - name: A repo with workflow, that downloads the current Pay-As-You-Go prices from Azure once a month and saves them in ~40MB files
   gh_user: tzuehlke
   repo: AzurePAYGPrices
-  img: https://de.wikipedia.org/wiki/Microsoft_Azure#/media/Datei:Microsoft_Azure.svg
+  img: https://blog.zuehlke.cloud/wp-content/uploads/2024/04/AzureCostExportPAYG-Overview-945x293.png
 
 - name: A regular rebuild and hosting of the TOR snowflake project (to provide access to censored websites)
   gh_user: tzuehlke
