@@ -1,22 +1,18 @@
 # Site settings
-title: Thomas Zühlke
+title: H. D. Ballesta
 description: 'Business Card Page'
-url: 'https://www.zuehlke.cloud'
+url: ''
 baseurl: ''
-profilepic: '/images/tzuehlke.jpg'
-bkimage: '/images/bk1.jpg'
+profilepic: '/images/im.jpg'
+bkimage: '/images/bk.jpg'
 google_analytics: UA-XXXXXX-X
 font_awesome: 'XXXXXXXXXX.js'
 
 author:
-  name: 'Thomas Zühlke'
-  email: thomas@zuehlke.cloud
-  mastodon: tzuehlke@mstdn.social
-  twitter_username: thomzuehlke
-#  facebook_username: joshgerdes
-  github_username:  tzuehlke
-  linkedin_username:  thomas-zühlke-889182165
-  meetup_name: Azure-Meetup-Rostock-MV
+  name: H. D. Ballesta
+  email: heverballesta@gmail.com
+  github_username:  hdballestan
+  linkedin_username:  hever-ballesta-6227b7199
 
 # Build settings
 destination: _site
