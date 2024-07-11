@@ -35,3 +35,4 @@ kramdown:
 
 #plugins: ['jekyll-paginate']
 exclude: ['README.md', 'screenshot-overview.png']
+remote_theme: jekyll-uno-timeline
