@@ -1,9 +1,9 @@
 ---
 ---
-@import "uno";
-@import "tables";
-@import "monokai";
-@import "timeline";
+@use "uno";
+@use "tables";
+@use "monokai";
+@use "timeline";
 
 /* Modifications */
 
@@ -58,3 +58,4 @@ pre.highlight code,
   border: 3px solid #fff;
   border-radius:100%;
 }
+
