@@ -7,10 +7,10 @@ blog_url: 'https://your-blog.example'
 tagline: 'Replace this text in _config.yml with your own short intro or remove it.'
 # Optional: list of repositories to feature in the Projects side-tab.
 # Format: "owner/repo". If empty, the site will fallback to fetching all user repos.
-featured_repos: [
-  mvelinamli/mvelinamli,
-  mvelinamli/Python
-]
+featured_repos:
+  - "mvelinamli/mvelinamli"
+  - "mvelinamli/Python"   
+  - "mvelinamli/SQLite_Docs"
 profilepic: '/images/pp.jpg'
 bkimage: '/images/mountain.jpg'
 # google_analytics: UA-XXXXXX-X
