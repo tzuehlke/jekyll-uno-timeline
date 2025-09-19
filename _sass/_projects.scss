@@ -62,3 +62,14 @@
 .timeline {
     transition: opacity 0.2s ease;
 }
+
+/* Blog panel styles */
+.blog-panel-wrap { margin: 0 0 2em 0; }
+.blog-panel-header { display:flex; justify-content:space-between; align-items:center; padding:8px 0; }
+.blog-panel-header h3 { margin:0; }
+.blog-panel-full { padding:6px 10px; border-radius:4px; border:1px solid #ddd; background:#fff; }
+.blog-panel-list { display:block; }
+.blog-panel-item { padding:10px 0; border-bottom:1px solid #eee; }
+.blog-panel-item-title { font-weight:bold; color:#333; display:block; margin-bottom:4px; }
+.blog-panel-item-meta { color:#999; font-size:0.85em; margin-bottom:6px; }
+.blog-panel-item-excerpt { color:#666; font-size:0.95em; }

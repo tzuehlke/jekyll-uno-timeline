@@ -3,7 +3,7 @@ title: Muhammed Veli NAMLI
 description: 'Dive deep into the world of computer science, Web3, AI, and cybersecurity. Our blog offers a student-friendly perspective, sharing practical knowledge and key insights from the journey of a self-taught developer. Start building your skills today.'
 url: 'https://mvelinamli.github.io' # the base hostname & protocol for your site
 baseurl: ''
-blog_url: 'https://your-blog.example'
+blog_url: '/blog'
 tagline: 'Replace this text in _config.yml with your own short intro or remove it.'
 # Optional: list of repositories to feature in the Projects side-tab.
 # Format: "owner/repo". If empty, the site will fallback to fetching all user repos.

@@ -25,10 +25,18 @@
         });
     }
 
+    // expose helpers so other scripts can call them safely
+    try { window.hideOriginalTimeline = hideOriginalTimeline; window.restoreOriginalTimeline = restoreOriginalTimeline; } catch(e){}
+
     function fetchAndRenderRepos() {
+        console.debug('[projects-fetch] fetchAndRenderRepos start', { time: Date.now() });
         var cfg = window._siteConfig || {};
         var user = cfg.githubUser || null;
         var featured = Array.isArray(cfg.featuredRepos) ? cfg.featuredRepos.slice(0) : [];
+
+        var contentWrapper = document.querySelector('.content-wrapper');
+        // if panel is not open, abort early to avoid stale renders
+        if (!contentWrapper || !contentWrapper.classList.contains('showing')) return;
 
         var container = document.querySelector('.content-wrapper__inner');
         if (!container) return;
@@ -37,18 +45,16 @@
         var prev = document.getElementById('gh-repos-injected');
         if (prev) prev.parentNode.removeChild(prev);
 
-        // Create wrapper early (even if fetch fails we won't break layout)
-        var wrapper = document.createElement('div');
-        wrapper.id = 'gh-repos-injected';
+    // Prepare DOM nodes but DO NOT append yet — wait until data is ready and panel still open
+    var wrapper = document.createElement('div');
+    wrapper.id = 'gh-repos-injected';
 
-        var gallery = document.createElement('div');
-        gallery.className = 'projects-gallery-view';
-        var grid = document.createElement('div');
-        grid.className = 'projects-gallery-grid';
-        gallery.appendChild(grid);
-        wrapper.appendChild(gallery);
-
-        container.appendChild(wrapper);
+    var gallery = document.createElement('div');
+    gallery.className = 'projects-gallery-view';
+    var grid = document.createElement('div');
+    grid.className = 'projects-gallery-grid';
+    gallery.appendChild(grid);
+    wrapper.appendChild(gallery);
 
         // If we're in featured mode, hide the original timeline entries so only featured repos show
         if (featured.length > 0) {
@@ -103,8 +109,22 @@
                 note.textContent = 'No repositories could be loaded. Check your `featured_repos` in _config.yml or open the browser console for details.';
                 gallery.insertBefore(note, grid);
                 console.warn('projects-fetch: no repos to display (featuredMode=' + (featured.length>0) + ')');
+                // append note only if panel still open
+                if (contentWrapper && contentWrapper.classList.contains('showing')) {
+                    container.appendChild(wrapper);
+                }
                 return;
             }
+
+                // append wrapper only if panel still open
+                if (contentWrapper && contentWrapper.classList.contains('showing')) {
+                    console.debug('[projects-fetch] appending wrapper', { time: Date.now(), repos: repos.length });
+                    container.appendChild(wrapper);
+                } else {
+                    // if panel closed meanwhile, abort rendering
+                    console.debug('[projects-fetch] panel closed before append - abort', { time: Date.now() });
+                    return;
+                }
 
             // render cards
             repos.forEach(function (r) {
@@ -151,24 +171,34 @@
 
     // Hook into existing behavior: when panel-button is clicked (side panel opens), call fetch
     document.addEventListener('DOMContentLoaded', function () {
-        document.querySelectorAll('a.panel-button').forEach(function (btn) {
+        // bind only to the Projects panel button so Blog panel doesn't trigger repo fetch
+        document.querySelectorAll('a.panel-button.projects-button').forEach(function (btn) {
             btn.addEventListener('click', function (e) {
-                var content = document.querySelector('.content-wrapper');
-                var willClose = content && content.classList.contains('showing');
-                if (willClose) {
-                    // panel is closing -> cleanup injected content and restore timeline
-                    var prev = document.getElementById('gh-repos-injected');
-                    if (prev) prev.parentNode.removeChild(prev);
-                    restoreOriginalTimeline();
-                    return;
-                }
-                // panel is opening: wait a bit and then fetch if panel still visible
-                setTimeout(function () {
-                    if (document.querySelector('.content-wrapper') && document.querySelector('.content-wrapper').classList.contains('showing')) {
-                        fetchAndRenderRepos();
-                    }
-                }, 500);
-            });
+                        // Wait briefly so main.js toggle runs first, then inspect panel state
+                        setTimeout(function () {
+                            var content = document.querySelector('.content-wrapper');
+                            var isShowing = content && content.classList.contains('showing');
+
+                            if (!isShowing) {
+                                // panel is closed -> cleanup injected content and restore timeline
+                                var prev = document.getElementById('gh-repos-injected');
+                                if (prev) prev.parentNode.removeChild(prev);
+                                restoreOriginalTimeline();
+                                return;
+                            }
+
+                            // panel is open -> ensure blog panel is removed and fetch repos
+                            var blogPrev = document.getElementById('blog-panel-injected');
+                            if (blogPrev) blogPrev.parentNode.removeChild(blogPrev);
+
+                            // panel is opening: wait a bit and then fetch if still visible
+                            setTimeout(function () {
+                                if (document.querySelector('.content-wrapper') && document.querySelector('.content-wrapper').classList.contains('showing')) {
+                                    fetchAndRenderRepos();
+                                }
+                            }, 400);
+                        }, 40);
+                });
         });
 
         // If page loaded with #projects hash, fetch as well

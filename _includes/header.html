@@ -108,10 +108,9 @@
           </nav>
 
           <!--<nav class="cover-navigation cover-navigation--primary">-->
-          <nav class="cover-navigation navigation--social">
+              <nav class="cover-navigation navigation--social">
             <ul class="navigation">
-              <li class="navigation__item"><a href="{{ site.blog_url }}" title="link to Blog" target="_blank"
-                  rel="noopener"><i class="fa-solid fa-link"></i>&nbsp;Blog</a></li>
+              <li class="navigation__item"><a href="#blog" title="Blog" class="panel-button blog-button"><i class="fa-solid fa-link"></i>&nbsp;Blog</a></li>
               <!--<li class="navigation__item"><a href="{{ site.baseurl }}/#" title="link to Tweets" class="panel-button"><i class="icon icon-social-twitter"></i>&nbsp;Tweets</a></li>-->
               <li class="navigation__item"><a href="#projects" title="My Projects"
                   class="panel-button projects-button"><i class="fa-solid fa-file-code"></i>&nbsp;Projects</a></li>
@@ -131,4 +130,18 @@
   window._siteConfig = window._siteConfig || {};
   window._siteConfig.githubUser = '{{ site.author.github_username | default: "" }}';
   window._siteConfig.featuredRepos = {{ site.featured_repos | jsonify }};
+  window._siteConfig.blogUrl = {{ site.blog_url | jsonify }};
+</script>
+
+<script>
+  window._sitePosts = [
+  {% for post in site.posts limit:50 %}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": {{ post.url | prepend: site.baseurl | jsonify }},
+      "date": {{ post.date | date: "%Y-%m-%dT%H:%M:%S%z" | jsonify }},
+      "excerpt": {{ post.excerpt | strip_html | jsonify }}
+    }{% if forloop.last == false %},{% endif %}
+  {% endfor %}
+  ];
 </script>
