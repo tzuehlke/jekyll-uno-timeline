@@ -9,7 +9,8 @@
     <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
         <a href="{{ site.baseurl }}/" title="link to home of {{ site.title }}">
-          <img src="{{ site.baseurl }}{{ site.profilepic }}" class="user-image" alt="My Profile Photo">
+          {% assign _profile_src = site.profilepic | prepend: site.baseurl %}
+          {% include responsive-image.html src=_profile_src alt='My Profile Photo' class='user-image' %}
           <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
         </a>
         <hr class="panel-cover__divider">
@@ -26,7 +27,7 @@
               <!-- Mastodon -->
               <li class="navigation__item">
                 <a href="https://mastodon.social/@{{ site.author.mastodon }}"
-                  title="@{{ site.author.mastodon }} on Mastodon" target="_blank">
+                  title="@{{ site.author.mastodon }} on Mastodon" target="_blank" rel="noopener noreferrer" aria-label="Mastodon">
                   <i class="fa-brands fa-mastodon"></i>
                   <span class="label">Mastodon</span>
                 </a>
@@ -37,7 +38,7 @@
               <!-- Twitter -->
               <li class="navigation__item">
                 <a href="https://twitter.com/{{ site.author.twitter_username }}"
-                  title="@{{ site.author.twitter_username }} on Twitter" target="_blank">
+                  title="@{{ site.author.twitter_username }} on Twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <!--<i class="icon icon-social-twitter"></i>-->
                   <i class="fa-brands fa-twitter"></i>
                   <span class="label">Twitter</span>
@@ -49,7 +50,7 @@
               <!-- Facebook -->
               <li class="navigation__item">
                 <a href="http://fb.me/{{ site.author.facebook_username }}"
-                  title="{{ site.author.facebook_username }} on Facebook" target="_blank">
+                  title="{{ site.author.facebook_username }} on Facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <!--<i class="icon icon-social-facebook"></i>-->
                   <i class="fa-brands fa-facebook"></i>
                   <span class="label">Facebook</span>
@@ -61,7 +62,7 @@
               <!-- LinkedIn -->
               <li class="navigation__item">
                 <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}"
-                  title="{{ site.author.linkedin_username }} on LinkedIn" target="_blank">
+                  title="{{ site.author.linkedin_username }} on LinkedIn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <!--<i class="icon icon-social-linkedin"></i>-->
                   <i class="fa-brands fa-linkedin"></i>
                   <span class="label">LinkedIn</span>
@@ -73,7 +74,7 @@
               <!-- GitHub -->
               <li class="navigation__item">
                 <a href="https://www.github.com/{{ site.author.github_username }}"
-                  title="{{ site.author.github_username }} on GitHub" target="_blank">
+                  title="{{ site.author.github_username }} on GitHub" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <!--<i class="icon icon-social-github"></i>-->
                   <i class="fa-brands fa-github"></i>
                   <span class="label">GitHub</span>
@@ -85,7 +86,7 @@
               <!-- Meetup -->
               <li class="navigation__item">
                 <a href="https://www.meetup.com/{{ site.author.meetup_name }}"
-                  title="Meetup {{ site.author.meetup_name }}" target="_blank">
+                  title="Meetup {{ site.author.meetup_name }}" target="_blank" rel="noopener noreferrer" aria-label="Meetup">
                   <!--<div style="font-size: 1.4rem;"><i class="fab fa-meetup fa-lg"></i></div>-->
                   <i class="fa-brands fa-meetup"></i>
                   <span class="label">Meetup</span>
@@ -96,7 +97,7 @@
               {% if site.author.email %}
               <!-- Email -->
               <li class="navigation__item">
-                <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
+                <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank" rel="noopener noreferrer" aria-label="Email">
                   <!--<i class="icon icon-mail"></i>-->
                   <i class="fa-solid fa-envelope"></i>
                   <span class="label">Email</span>
@@ -138,11 +139,11 @@
   window._sitePosts = [
     {% for post in site.posts limit: 50 %}
   {
-    "title": { { post.title | jsonify } },
-    "url": { { post.url | prepend: site.baseurl | jsonify } },
-    "date": { { post.date | date: "%Y-%m-%dT%H:%M:%S%z" | jsonify } },
-    "excerpt": { { post.excerpt | strip_html | jsonify } }
-  } {% if forloop.last == false %}, {% endif %}
+    "title": {{ post.title | jsonify }},
+    "url": {{ post.url | prepend: site.baseurl | jsonify }},
+    "date": {{ post.date | date: "%Y-%m-%dT%H:%M:%S%z" | jsonify }},
+    "excerpt": {{ post.excerpt | strip_html | jsonify }}
+  }{% if forloop.last == false %}, {% endif %}
   {% endfor %}
   ];
 </script>

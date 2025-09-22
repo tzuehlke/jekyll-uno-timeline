@@ -30,6 +30,15 @@ $(document).ready(function () {
   try { window.cleanupInjectedPanels = cleanupInjectedPanels; } catch(e){}
 
   $('a.panel-button').click(function (e) {
+    // If this is the blog button linking to the blog page (not a hash), allow normal navigation
+    try {
+      var _href = $(this).attr('href') || '';
+      if ($(this).hasClass('blog-button') && _href && _href.indexOf('#') !== 0 && _href.indexOf('#blog') === -1) {
+        // let the browser follow the link; do not open the side panel
+        return;
+      }
+    } catch(e){}
+
     // ensure we remove any injected fragments before toggling to avoid mixups
     cleanupInjectedPanels();
 

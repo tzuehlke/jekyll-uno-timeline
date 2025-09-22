@@ -98,7 +98,16 @@
   document.addEventListener('DOMContentLoaded', function(){
     // when blog panel triggered, render
     document.querySelectorAll('a.panel-button.blog-button').forEach(function(btn){
-      btn.addEventListener('click', function(){
+      btn.addEventListener('click', function(e){
+        // If the blog button is a normal link to the blog index, allow navigation
+        try {
+          var href = btn.getAttribute('href') || '';
+          if (href && href.indexOf('#') !== 0 && href.indexOf('#blog') === -1) {
+            // do not open side panel; let browser handle navigation
+            return;
+          }
+        } catch(err){}
+
         // Defer slightly so main toggle runs first; then decide open/close
         setTimeout(function(){
           var content = document.querySelector('.content-wrapper');

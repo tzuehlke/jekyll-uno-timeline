@@ -1,5 +1,16 @@
----
----
+/*
+  If you use local fonts, add @font-face with font-display: swap for better performance.
+  Example:
+
+  @font-face {
+    font-family: 'InterCustom';
+    src: url('../fonts/Inter-Subset.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+*/
 @import "uno";
 @import "tables";
 @import "monokai";

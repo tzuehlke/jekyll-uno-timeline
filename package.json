@@ -1,0 +1,20 @@
+{
+  "name": "mvelinamli-site-build",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+  "build:css": "sass -I _sass css/main.scss dist/css/main.css --no-source-map --style=compressed && postcss dist/css/main.css -o dist/css/main.css",
+  "build:js": "node ./scripts/strip-frontmatter.js && esbuild dist/js/main.js --bundle --minify --outfile=dist/js/bundle.js",
+    "hash-assets": "node ./scripts/hash-assets.js",
+    "build": "npm run build:css && npm run build:js && npm run hash-assets",
+    "extract-critical": "critical --base=_site --src=index.html --width=1300 --height=900 --inline=false --minify=true --target=_includes/critical.css"
+  },
+  "devDependencies": {
+    "cssnano": "^5.1.15",
+    "esbuild": "^0.18.0",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.73.0",
+    "critical": "^6.0.0"
+  }
+}
+

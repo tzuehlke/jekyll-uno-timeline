@@ -3,3 +3,5 @@ _site/
 .htaccess
 _config.yml
 .DS_Store
+dist/
+node_modules/

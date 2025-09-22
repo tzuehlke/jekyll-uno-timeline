@@ -1,0 +1,7 @@
+title: "${{ site.title }}"
+url: "https://mvelinamli.github.io"
+baseurl: ""
+environment: production
+plugins: []
+permalink: /:categories/:year/:month/:day/:title.html
+exclude: ["node_modules", "dist"]

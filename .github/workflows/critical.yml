@@ -1,0 +1,36 @@
+name: Generate Critical CSS
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  critical:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+      - name: Install bundler gems
+        run: bundle install
+      - name: Build site
+        run: bundle exec jekyll build
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install npm deps
+        run: npm ci
+      - name: Build assets
+        run: npm run build
+      - name: Extract critical CSS
+        run: npm run extract-critical
+      - name: Commit critical CSS
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _includes/critical.css || true
+          git commit -m "chore(ci): update critical css" || echo "no changes"
+          git push origin HEAD:master || echo "push failed"

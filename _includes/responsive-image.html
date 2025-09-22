@@ -1,0 +1,12 @@
+{%- assign src = include.src -%}
+{%- assign alt = include.alt | default: "" -%}
+{%- assign class = include.class | default: "" -%}
+{%- assign base = src | split: '/' | last -%}
+{%- assign name = base | split: '.' | first -%}
+{%- assign ext = base | split: '.' | last | downcase -%}
+
+<picture>
+  <source type="image/avif" srcset="{{ src | replace: '.' , '.avif' }}">
+  <source type="image/webp" srcset="{{ src | replace: '.' , '.webp' }}">
+  <img src="{{ src }}" alt="{{ alt }}" class="{{ class }}" loading="lazy" decoding="async" />
+</picture>
