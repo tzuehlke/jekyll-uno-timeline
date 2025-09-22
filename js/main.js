@@ -10,7 +10,38 @@ function toggleMobileMenu() {
 }
 
 $(document).ready(function () {
+  // central cleanup: remove any injected panel content left by scripts
+  function cleanupInjectedPanels() {
+    try {
+      var gh = document.getElementById('gh-repos-injected');
+      if (gh && gh.parentNode) gh.parentNode.removeChild(gh);
+    } catch(e){}
+    try {
+      var blog = document.getElementById('blog-panel-injected');
+      if (blog && blog.parentNode) blog.parentNode.removeChild(blog);
+    } catch(e){}
+    try { if (window.restoreOriginalTimeline) window.restoreOriginalTimeline(); } catch(e){}
+  }
+
+  // run once on load to remove any stale injected content
+  cleanupInjectedPanels();
+
+  // expose cleanup for other scripts to call
+  try { window.cleanupInjectedPanels = cleanupInjectedPanels; } catch(e){}
+
   $('a.panel-button').click(function (e) {
+    // If this is the blog button linking to the blog page (not a hash), allow normal navigation
+    try {
+      var _href = $(this).attr('href') || '';
+      if ($(this).hasClass('blog-button') && _href && _href.indexOf('#') !== 0 && _href.indexOf('#blog') === -1) {
+        // let the browser follow the link; do not open the side panel
+        return;
+      }
+    } catch(e){}
+
+    // ensure we remove any injected fragments before toggling to avoid mixups
+    cleanupInjectedPanels();
+
     if ($('.content-wrapper').hasClass('showing')){
       $('.content-wrapper').removeClass('animated slideInRight')
       $('.panel-cover').removeClass('panel-cover--collapsed')

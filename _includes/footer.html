@@ -1,7 +1,19 @@
 <footer class="footer">
-  <span class="footer__copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</span>
+  <span class="footer__copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights
+    reserved.</span>
 </footer>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/js/main.js?{{site.time | date: '%s%N'}}"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/js/github_api.js?{{site.time | date: '%s%N'}}"></script>
+{% assign js_map = site.data.asset_map %}
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+{% if js_map %}
+  <script type="text/javascript" src="{{ js_map['main.js'] | default: site.baseurl | append: '/js/main.js' }}" defer></script>
+  <script type="text/javascript" src="{{ js_map['github_api.js'] | default: site.baseurl | append: '/js/github_api.js' }}" defer></script>
+  <script type="text/javascript" src="{{ js_map['projects-fetch.js'] | default: site.baseurl | append: '/js/projects-fetch.js' }}" defer></script>
+{% else %}
+  <script type="text/javascript" src="{{ site.baseurl }}/js/main.js?{{site.time | date: '%s%N'}}" defer></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/github_api.js?{{site.time | date: '%s%N'}}" defer></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/projects-fetch.js?{{site.time | date: '%s%N'}}" defer></script>
+{% endif %}
+<!-- blog-panel.js removed: blog now uses dedicated /blog/ pages -->
+
+<!-- footer scripts end -->

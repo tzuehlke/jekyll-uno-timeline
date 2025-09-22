@@ -1,9 +1,21 @@
----
----
+/*
+  If you use local fonts, add @font-face with font-display: swap for better performance.
+  Example:
+
+  @font-face {
+    font-family: 'InterCustom';
+    src: url('../fonts/Inter-Subset.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+*/
 @import "uno";
 @import "tables";
 @import "monokai";
 @import "timeline";
+@import "projects";
 
 /* Modifications */
 
@@ -47,7 +59,7 @@ pre.highlight code,
 }
 
 .footer__copyright {
-    margin: 0 20px 10px;
+  margin: 0 20px 10px;
 }
 
 .user-image {
@@ -56,5 +68,5 @@ pre.highlight code,
   width: 100px;
   height: 100px;
   border: 3px solid #fff;
-  border-radius:100%;
+  border-radius: 100%;
 }

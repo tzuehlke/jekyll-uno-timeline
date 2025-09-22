@@ -1,22 +1,30 @@
 # Site settings
-title: Thomas Zühlke
-description: 'Business Card Page'
-url: 'https://www.zuehlke.cloud'
+title: Muhammed Veli NAMLI
+description: 'Dive deep into the world of computer science, Web3, AI, and cybersecurity. Our blog offers a student-friendly perspective, sharing practical knowledge and key insights from the journey of a self-taught developer. Start building your skills today.'
+url: 'https://mvelinamli.github.io' # the base hostname & protocol for your site
 baseurl: ''
-profilepic: '/images/tzuehlke.jpg'
-bkimage: '/images/bk1.jpg'
-google_analytics: UA-XXXXXX-X
-font_awesome: 'XXXXXXXXXX.js'
+blog_url: 'https://mvelinamli.github.io/blog.github.io'
+tagline: 'Replace this text in _config.yml with your own short intro or remove it.'
+# Optional: list of repositories to feature in the Projects side-tab.
+# Format: "owner/repo". If empty, the site will fallback to fetching all user repos.
+featured_repos:
+  - "mvelinamli/mvelinamli"
+  - "mvelinamli/Python"   
+  - "mvelinamli/SQLite_Docs"
+profilepic: '/images/pp.jpg'
+bkimage: '/images/mountain.jpg'
+# google_analytics: UA-XXXXXX-X
+font_awesome: '621b143ad7.js'
 
 author:
-  name: 'Thomas Zühlke'
-  email: thomas@zuehlke.cloud
-  mastodon: tzuehlke@mstdn.social
-  twitter_username: thomzuehlke
+  name: 'Muhammed Veli NAMLI'
+  email: namlimuhammedveli@gmail.com
+  # mastodon: tzuehlke@mstdn.social
+  twitter_username: mvelinamli
 #  facebook_username: joshgerdes
-  github_username:  tzuehlke
-  linkedin_username:  thomas-zühlke-889182165
-  meetup_name: Azure-Meetup-Rostock-MV
+  github_username:  mvelinamli
+  linkedin_username:  muhammed-veli-namli-9801912b1
+  # meetup_name: Azure-Meetup-Rostock-MV
 
 # Build settings
 destination: _site

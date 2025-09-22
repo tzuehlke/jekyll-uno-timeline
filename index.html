@@ -11,7 +11,9 @@ robots: noindex
 
       <li class="timeline-inverted">
         <div class="timeline-image">
-          <img class="img-me" src="{{ project.img | prepend: site.baseurl }}" alt="">
+          {% assign _proj_img = project.img | prepend: site.baseurl %}
+          {% assign _proj_alt = project.name %}
+          {% include responsive-image.html src=_proj_img alt=_proj_alt class='img-me' %}
         </div>
         <div class="timeline-panel">
           <div class="timeline-heading">

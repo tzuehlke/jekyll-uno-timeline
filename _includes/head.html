@@ -1,6 +1,7 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="Content-Language" content="{{ site.lang | default: 'en' }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% if page.robots %}
   <meta name="robots" content="{{ page.robots }}">
@@ -18,12 +19,16 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.image %}
+  <meta name="twitter:image" content="{{ page.image | prepend: site.baseurl }}">
+  {% endif %}
   {% if site.author.twitter_username %}
   <meta name="twitter:creator" content="{{ site.author.twitter_username }}">
   {% endif %}
   <meta name="twitter:image" content="{{ site.baseurl }}/images/favicons/favicon-194x194.png" />
 
   <meta property="og:type" content="article">
+  <meta property="og:locale" content="{{ site.lang | default: 'en_US' }}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:image" content="{{ site.baseurl }}/images/favicons/favicon-194x194.png" />
@@ -48,10 +53,48 @@
   <meta name="msapplication-TileImage" content="{{ site.baseurl }}/images/favicons/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
   
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?{{site.time | date: '%s%N'}}">
+  <style>
+    {% include critical.css %}
+  </style>
+
+  {% assign css_map = site.data.asset_map %}
+  {% assign css_href = nil %}
+  {% if css_map %}
+    {% if css_map['main.min.css'] %}
+      {% assign css_href = css_map['main.min.css'] %}
+    {% elsif css_map['main.css'] %}
+      {% assign css_href = css_map['main.css'] %}
+    {% endif %}
+  {% endif %}
+
+  {% if css_href %}
+    <link rel="preload" href="{{ css_href }}" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ css_href }}"></noscript>
+  {% else %}
+    <link rel="preload" href="{{ site.baseurl }}/css/main.css?{{site.time | date: '%s%N'}}" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?{{site.time | date: '%s%N'}}"></noscript>
+  {% endif %}
   <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
-  <script src="https://kit.fontawesome.com/{{ site.font_awesome }}" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}",
+    "sameAs": [
+      {% if site.author.twitter_username %}"https://twitter.com/{{ site.author.twitter_username }}"{% endif %}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+  <script src="https://kit.fontawesome.com/{{ site.font_awesome }}" crossorigin="anonymous" defer></script>
+  <!-- Example for preloading a local font (adjust path & names) -->
+  <link rel="preload" href="{{ site.baseurl }}/fonts/Inter-Subset.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Non-blocking Google Fonts: load with display=swap -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Slab:wght@300;400&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet"></noscript>
   {% if site.google_analytics %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
